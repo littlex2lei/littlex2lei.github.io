@@ -14,7 +14,7 @@
 <meta property="og:description" content="用python执行cmd命令">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-12-22T03:06:38.000Z">
-<meta property="article:modified_time" content="2020-12-22T07:32:43.542Z">
+<meta property="article:modified_time" content="2020-12-22T07:33:33.296Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="python">
 <meta property="article:tag" content="系统操作">
@@ -100,7 +100,7 @@
         <h3 id="用python执行cmd命令"><a href="#用python执行cmd命令" class="headerlink" title="用python执行cmd命令"></a>用python执行cmd命令</h3><a id="more"></a>
 
 <p>写好command 在os.open里面run就好</p>
-<p>如果涉及的命令，在cmd窗口中需要回复yes or no的时候，在command开头加上 echo y。</p>
+<p>如果涉及的命令，在cmd窗口中需要回复yes or no的时候,在command开头加上 echo y。</p>
 <p>对于多条命令的分隔， 采用 | 符号即可。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">command = <span class="string">&#x27;echo y|cd C:\&#x27;</span></span><br><span class="line"><span class="string">os.popen(command)</span></span><br></pre></td></tr></table></figure>
       

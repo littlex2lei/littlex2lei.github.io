@@ -6,15 +6,15 @@
   
   <title>abaqus和python的接口 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="0.引言本篇主要记录下 abaqus和python交互的主要途径。 1.Abaqus脚本接口功能Abaqus脚本接口可以实现下列功能：1） 创建、修改Abaqus模型中的属性（例如，部件、材料、荷载和分析步等）。2） 创建、修改和提交分析作业。3） 查看分析结果。 2.Abaqus中不同类型的脚本接口Python是abaqus的标准编程语言。除了命令行接口之外，Abaqus还提供了下列脚本接口；">
+  <meta name="description" content="本篇主要记录下 abaqus和python交互的主要途径。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="abaqus和python的接口">
 <meta property="og:url" content="http://example.com/2020/12/19/abaqus%E5%92%8Cpython%E7%9A%84%E6%8E%A5%E5%8F%A3/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="0.引言本篇主要记录下 abaqus和python交互的主要途径。 1.Abaqus脚本接口功能Abaqus脚本接口可以实现下列功能：1） 创建、修改Abaqus模型中的属性（例如，部件、材料、荷载和分析步等）。2） 创建、修改和提交分析作业。3） 查看分析结果。 2.Abaqus中不同类型的脚本接口Python是abaqus的标准编程语言。除了命令行接口之外，Abaqus还提供了下列脚本接口；">
+<meta property="og:description" content="本篇主要记录下 abaqus和python交互的主要途径。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-12-19T10:20:07.000Z">
-<meta property="article:modified_time" content="2020-12-20T01:14:40.997Z">
+<meta property="article:modified_time" content="2020-12-22T07:39:22.631Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="abaqus">
 <meta property="article:tag" content="python">
@@ -98,7 +98,8 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h3 id="0-引言"><a href="#0-引言" class="headerlink" title="0.引言"></a>0.引言</h3><p>本篇主要记录下 abaqus和python交互的主要途径。</p>
+        <h3 id="本篇主要记录下-abaqus和python交互的主要途径。"><a href="#本篇主要记录下-abaqus和python交互的主要途径。" class="headerlink" title="本篇主要记录下 abaqus和python交互的主要途径。"></a>本篇主要记录下 abaqus和python交互的主要途径。</h3><a id="more"></a>
+
 <h3 id="1-Abaqus脚本接口功能"><a href="#1-Abaqus脚本接口功能" class="headerlink" title="1.Abaqus脚本接口功能"></a>1.Abaqus脚本接口功能</h3><p>Abaqus脚本接口可以实现下列功能：<br>1） 创建、修改Abaqus模型中的属性（例如，部件、材料、荷载和分析步等）。<br>2） 创建、修改和提交分析作业。<br>3） 查看分析结果。</p>
 <h3 id="2-Abaqus中不同类型的脚本接口"><a href="#2-Abaqus中不同类型的脚本接口" class="headerlink" title="2.Abaqus中不同类型的脚本接口"></a>2.Abaqus中不同类型的脚本接口</h3><p>Python是abaqus的标准编程语言。除了命令行接口之外，Abaqus还提供了下列脚本接口； </p>
 <p>1）环境文件abaqus_v6.env中使用的是Python语句,详细介绍请见《Abaqus Scripting User’s Manual》6.9 节 “ Using Abaqus Scripting Interface commands in your environment file<br>2） INP文件中* PARAMETER数据行中的参数定义使用的是Python语句。关于* PA- RAMETER用法的详细介绍，请参见Abaqus 6. 10帮助手册《Abaqus Keywords Reference Man- ual》o<br>3） 运行参数分析需要编写和执行Python脚本(.psf)<br>4） Abaqus/CAE将所有的命令记录在扩展名为.rpy的文件中，这类文件中的所有命令均为Python访句。<br>5） 在Abaqus/CAE的File菜单下选择Run Script,可以直接运行脚本。<br>6） 在Abaqus/CAE的File菜单下选择Macro Manager,可以录制宏。</p>
