@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>abaqus和python的接口 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="0.引言本篇主要记录下 abaqus和python交互的主要途径。 1.Abaqus脚本接口功能Abaqus脚本接口可以实现下列功能：1） 创建、修改Abaqus模型中的属性（例如，部件、材料、荷载和分析步等）。2） 创建、修改和提交分析作业。3） 查看分析结果。 2.Abaqus中不同类型的脚本接口Python是abaqus的标准编程语言。除了命令行接口之外，Abaqus还提供了下列脚本接口；">
+<meta property="og:type" content="article">
+<meta property="og:title" content="abaqus和python的接口">
+<meta property="og:url" content="http://example.com/2020/12/19/abaqus%E5%92%8Cpython%E7%9A%84%E6%8E%A5%E5%8F%A3/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="0.引言本篇主要记录下 abaqus和python交互的主要途径。 1.Abaqus脚本接口功能Abaqus脚本接口可以实现下列功能：1） 创建、修改Abaqus模型中的属性（例如，部件、材料、荷载和分析步等）。2） 创建、修改和提交分析作业。3） 查看分析结果。 2.Abaqus中不同类型的脚本接口Python是abaqus的标准编程语言。除了命令行接口之外，Abaqus还提供了下列脚本接口；">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-12-19T10:20:07.000Z">
+<meta property="article:modified_time" content="2020-12-20T01:14:40.997Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="abaqus">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="二次开发">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-abaqus和python的接口" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/12/19/abaqus%E5%92%8Cpython%E7%9A%84%E6%8E%A5%E5%8F%A3/" class="article-date">
+  <time class="dt-published" datetime="2020-12-19T10:20:07.000Z" itemprop="datePublished">2020-12-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      abaqus和python的接口
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="0-引言"><a href="#0-引言" class="headerlink" title="0.引言"></a>0.引言</h3><p>本篇主要记录下 abaqus和python交互的主要途径。</p>
+<h3 id="1-Abaqus脚本接口功能"><a href="#1-Abaqus脚本接口功能" class="headerlink" title="1.Abaqus脚本接口功能"></a>1.Abaqus脚本接口功能</h3><p>Abaqus脚本接口可以实现下列功能：<br>1） 创建、修改Abaqus模型中的属性（例如，部件、材料、荷载和分析步等）。<br>2） 创建、修改和提交分析作业。<br>3） 查看分析结果。</p>
+<h3 id="2-Abaqus中不同类型的脚本接口"><a href="#2-Abaqus中不同类型的脚本接口" class="headerlink" title="2.Abaqus中不同类型的脚本接口"></a>2.Abaqus中不同类型的脚本接口</h3><p>Python是abaqus的标准编程语言。除了命令行接口之外，Abaqus还提供了下列脚本接口； </p>
+<p>1）环境文件abaqus_v6.env中使用的是Python语句,详细介绍请见《Abaqus Scripting User’s Manual》6.9 节 “ Using Abaqus Scripting Interface commands in your environment file<br>2） INP文件中* PARAMETER数据行中的参数定义使用的是Python语句。关于* PA- RAMETER用法的详细介绍，请参见Abaqus 6. 10帮助手册《Abaqus Keywords Reference Man- ual》o<br>3） 运行参数分析需要编写和执行Python脚本(.psf)<br>4） Abaqus/CAE将所有的命令记录在扩展名为.rpy的文件中，这类文件中的所有命令均为Python访句。<br>5） 在Abaqus/CAE的File菜单下选择Run Script,可以直接运行脚本。<br>6） 在Abaqus/CAE的File菜单下选择Macro Manager,可以录制宏。</p>
+<h3 id="abaqus中脚本运行方法"><a href="#abaqus中脚本运行方法" class="headerlink" title="abaqus中脚本运行方法"></a>abaqus中脚本运行方法</h3><ul>
+<li><p><strong>启动Abaqus/CAE的同时运行脚本</strong><br>成熟的回测程序减少了清理数据并进行迭代等策略测试中所必须的繁琐过程。它具有可用于各种数据源的内置函数，保证数据导入更加容易。</p>
+</li>
+<li><p><strong>不启动Abaqus/CAE而直接运行脚本</strong><br>策略参数的调整有时可能带来同类策略是否盈利的差别。运行回测后，只需更改几行代码即可轻松完成优化。</p>
+</li>
+<li><p><strong>从启动屏幕（startup screen）运行脚本</strong><br>Python的绘图工具并不是十分友好，尤其是第一次使用时。在Backtrader中可用少量代码创建复杂的图表。</p>
+</li>
+</ul>
+<ul>
+<li><strong>从File菜单运行脚本</strong></li>
+</ul>
+<ul>
+<li><strong>从命令行接口运行脚本</strong></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/12/19/abaqus%E5%92%8Cpython%E7%9A%84%E6%8E%A5%E5%8F%A3/" data-id="ckivjxnjr0000gsup0lqk4rtl" data-title="abaqus和python的接口" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/abaqus/" rel="tag">abaqus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BA%8C%E6%AC%A1%E5%BC%80%E5%8F%91/" rel="tag">二次开发</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/12/20/Python%E8%AE%BF%E9%97%AEODB%E6%95%B0%E6%8D%AE/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Python访问ODB数据
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/12/15/Python%E5%9B%9E%E6%B5%8B%E7%A5%9E%E5%99%A8BackTrader-%E4%B8%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Python回测神器BackTrader-下</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/abaqus/" rel="tag">abaqus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8C%E6%AC%A1%E5%BC%80%E5%8F%91/" rel="tag">二次开发</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%88%AC%E8%A7%86%E9%A2%91/" rel="tag">爬视频</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%B3%BB%E7%BB%9F%E6%93%8D%E4%BD%9C/" rel="tag">系统操作</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/abaqus/" style="font-size: 16.67px;">abaqus</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/%E4%BA%8C%E6%AC%A1%E5%BC%80%E5%8F%91/" style="font-size: 16.67px;">二次开发</a> <a href="/tags/%E7%88%AC%E8%A7%86%E9%A2%91/" style="font-size: 10px;">爬视频</a> <a href="/tags/%E7%B3%BB%E7%BB%9F%E6%93%8D%E4%BD%9C/" style="font-size: 13.33px;">系统操作</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/12/22/%E4%BD%BF%E7%94%A8python%E4%B8%8B%E8%BD%BDb%E7%AB%99%E6%9F%90%E4%B8%AAup%E4%B8%BB%E8%A7%86%E9%A2%91%E5%88%97%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6/">使用python下载b站某个up主视频列表中的视频文件</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/22/python%E5%91%BD%E4%BB%A4%E6%9D%80%E6%AD%BB%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%BB%99%E5%AE%9A%E5%90%8D%E7%A7%B0%E7%9A%84%E8%BF%9B%E7%A8%8B/">python命令杀死系统中给定名称的进程</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/22/python%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8Ccmd%E5%91%BD%E4%BB%A4/">python如何运行cmd命令</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/21/%E9%87%87%E7%94%A8abaqus-python%E5%91%BD%E4%BB%A4%E6%B5%81%E5%88%86%E6%9E%90%E9%92%A2%E6%A2%81%E5%A1%91%E6%80%A7%E5%8A%A0%E8%BD%BD/">采用abaqus+python命令流分析钢梁塑性加载</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/20/Python%E8%AE%BF%E9%97%AEODB%E6%95%B0%E6%8D%AE/">Python访问ODB数据</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2020 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
