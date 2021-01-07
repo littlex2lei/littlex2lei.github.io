@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>ISight Demo | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="问题描述：采用ISight对工字型截面的悬臂梁静力受力进行参数化分析参数输入：梁高&#x2F;翼缘宽度&#x2F;腹板厚度&#x2F;翼缘厚度输出：质量&#x2F;应力&#x2F;挠度">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ISight Demo">
+<meta property="og:url" content="http://example.com/2021/01/01/ISight-Demo/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="问题描述：采用ISight对工字型截面的悬臂梁静力受力进行参数化分析参数输入：梁高&#x2F;翼缘宽度&#x2F;腹板厚度&#x2F;翼缘厚度输出：质量&#x2F;应力&#x2F;挠度">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://pic.downk.cc/item/5fee87213ffa7d37b39d0d36.jpg">
+<meta property="og:image" content="https://pic.downk.cc/item/5fee81023ffa7d37b39a7560.jpg">
+<meta property="og:image" content="https://pic.downk.cc/item/5fee81283ffa7d37b39a8b97.jpg">
+<meta property="og:image" content="https://pic.downk.cc/item/5fee81473ffa7d37b39a9c7d.jpg">
+<meta property="og:image" content="https://pic.downk.cc/item/5fee81633ffa7d37b39aac8c.jpg">
+<meta property="og:image" content="https://pic.downk.cc/item/5fee81bd3ffa7d37b39ae1b3.jpg">
+<meta property="og:image" content="https://pic.downk.cc/item/5fee84243ffa7d37b39be9e6.jpg">
+<meta property="og:image" content="https://pic.downk.cc/item/5fee82513ffa7d37b39b365e.jpg">
+<meta property="og:image" content="https://pic.downk.cc/item/5fee829f3ffa7d37b39b5529.jpg">
+<meta property="og:image" content="https://pic.downk.cc/item/5fee887d3ffa7d37b39d9577.jpg">
+<meta property="og:image" content="https://pic.downk.cc/item/5fee88933ffa7d37b39d9f5b.jpg">
+<meta property="og:image" content="https://pic.downk.cc/item/5fee88a33ffa7d37b39da51a.jpg">
+<meta property="og:image" content="https://pic.downk.cc/item/5fee88c43ffa7d37b39db265.jpg">
+<meta property="og:image" content="https://pic.downk.cc/item/5fee88f93ffa7d37b39dc618.jpg">
+<meta property="og:image" content="https://pic.downk.cc/item/5fee891e3ffa7d37b39dd31d.jpg">
+<meta property="og:image" content="https://pic.downk.cc/item/5fee8a0d3ffa7d37b39e3136.jpg">
+<meta property="og:image" content="https://pic.downk.cc/item/5fee8a503ffa7d37b39e479b.jpg">
+<meta property="og:image" content="https://pic.downk.cc/item/5fee8ad83ffa7d37b39e8753.jpg">
+<meta property="og:image" content="https://pic.downk.cc/item/5fee8b6b3ffa7d37b39edb40.jpg">
+<meta property="og:image" content="https://pic.downk.cc/item/5fee8b993ffa7d37b39ef04f.jpg">
+<meta property="article:published_time" content="2021-01-01T01:53:28.000Z">
+<meta property="article:modified_time" content="2021-01-01T02:48:06.063Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="iSight">
+<meta property="article:tag" content="ISight经典入门教程视频系列">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.downk.cc/item/5fee87213ffa7d37b39d0d36.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-ISight-Demo" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/01/01/ISight-Demo/" class="article-date">
+  <time class="dt-published" datetime="2021-01-01T01:53:28.000Z" itemprop="datePublished">2021-01-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      ISight Demo
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="问题描述：采用ISight对工字型截面的悬臂梁静力受力进行参数化分析"><a href="#问题描述：采用ISight对工字型截面的悬臂梁静力受力进行参数化分析" class="headerlink" title="问题描述：采用ISight对工字型截面的悬臂梁静力受力进行参数化分析"></a>问题描述：采用ISight对工字型截面的悬臂梁静力受力进行参数化分析</h4><h4 id="参数输入：梁高-翼缘宽度-腹板厚度-翼缘厚度"><a href="#参数输入：梁高-翼缘宽度-腹板厚度-翼缘厚度" class="headerlink" title="参数输入：梁高/翼缘宽度/腹板厚度/翼缘厚度"></a>参数输入：梁高/翼缘宽度/腹板厚度/翼缘厚度</h4><h4 id="输出：质量-应力-挠度"><a href="#输出：质量-应力-挠度" class="headerlink" title="输出：质量/应力/挠度"></a>输出：质量/应力/挠度</h4><a id="more"></a>
+
+<p>说明：这里的输入和输出之间的数学模型在excel内部实现。</p>
+<h4 id=""><a href="#" class="headerlink" title=""></a><img src="https://pic.downk.cc/item/5fee87213ffa7d37b39d0d36.jpg" style="zoom:30%;" /></h4><h1 id="1-搭建基本模型"><a href="#1-搭建基本模型" class="headerlink" title="1 搭建基本模型"></a>1 搭建基本模型</h1><ul>
+<li><h4 id="模型初始界面"><a href="#模型初始界面" class="headerlink" title="模型初始界面"></a>模型初始界面</h4></li>
+</ul>
+<p><img src="https://pic.downk.cc/item/5fee81023ffa7d37b39a7560.jpg"></p>
+<ul>
+<li><h4 id="建立Excel组件-载入数据"><a href="#建立Excel组件-载入数据" class="headerlink" title="建立Excel组件+载入数据"></a>建立Excel组件+载入数据</h4></li>
+</ul>
+<p><img src="https://pic.downk.cc/item/5fee81283ffa7d37b39a8b97.jpg"></p>
+<ul>
+<li><h4 id="Excel原始内容"><a href="#Excel原始内容" class="headerlink" title="Excel原始内容"></a>Excel原始内容</h4></li>
+</ul>
+<p><img src="https://pic.downk.cc/item/5fee81473ffa7d37b39a9c7d.jpg"></p>
+<ul>
+<li><h4 id="ISight自动识别Excel文件中的参数-数值以及参数类型（输入-输出"><a href="#ISight自动识别Excel文件中的参数-数值以及参数类型（输入-输出" class="headerlink" title="ISight自动识别Excel文件中的参数/数值以及参数类型（输入/输出)"></a>ISight自动识别Excel文件中的参数/数值以及参数类型（输入/输出)</h4></li>
+</ul>
+<p><img src="https://pic.downk.cc/item/5fee81633ffa7d37b39aac8c.jpg"></p>
+<p><img src="https://pic.downk.cc/item/5fee81bd3ffa7d37b39ae1b3.jpg"></p>
+<ul>
+<li><h4 id="导入Excel后ISight中的模型组成"><a href="#导入Excel后ISight中的模型组成" class="headerlink" title="导入Excel后ISight中的模型组成"></a>导入Excel后ISight中的模型组成</h4></li>
+</ul>
+<p><img src="https://pic.downk.cc/item/5fee84243ffa7d37b39be9e6.jpg"></p>
+<ul>
+<li><h4 id="修改参数，重新获得模拟结果"><a href="#修改参数，重新获得模拟结果" class="headerlink" title="修改参数，重新获得模拟结果"></a>修改参数，重新获得模拟结果</h4></li>
+</ul>
+<p><img src="https://pic.downk.cc/item/5fee82513ffa7d37b39b365e.jpg"></p>
+<ul>
+<li><h4 id="使程序后台运行"><a href="#使程序后台运行" class="headerlink" title="使程序后台运行"></a>使程序后台运行</h4></li>
+</ul>
+<p><img src="https://pic.downk.cc/item/5fee829f3ffa7d37b39b5529.jpg"></p>
+<h1 id="2-实验设计，DOE-Design-of-Experiment"><a href="#2-实验设计，DOE-Design-of-Experiment" class="headerlink" title="2 实验设计，DOE:Design of Experiment"></a>2 实验设计，DOE:Design of Experiment</h1><ul>
+<li><h3 id="建立一个DOE模块"><a href="#建立一个DOE模块" class="headerlink" title="建立一个DOE模块"></a>建立一个DOE模块</h3><p><img src="https://pic.downk.cc/item/5fee887d3ffa7d37b39d9577.jpg"></p>
+<p><img src="https://pic.downk.cc/item/5fee88933ffa7d37b39d9f5b.jpg"></p>
+</li>
+</ul>
+<ul>
+<li><h3 id="选择参数的采样方法"><a href="#选择参数的采样方法" class="headerlink" title="选择参数的采样方法"></a>选择参数的采样方法</h3></li>
+</ul>
+<p><img src="https://pic.downk.cc/item/5fee88a33ffa7d37b39da51a.jpg"></p>
+<ul>
+<li><h3 id="定义DOE中的输入和输出"><a href="#定义DOE中的输入和输出" class="headerlink" title="定义DOE中的输入和输出"></a>定义DOE中的输入和输出</h3><ul>
+<li><h4 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h4><p><img src="https://pic.downk.cc/item/5fee88c43ffa7d37b39db265.jpg"></p>
+</li>
+<li><h4 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h4></li>
+</ul>
+</li>
+</ul>
+<p><img src="https://pic.downk.cc/item/5fee88f93ffa7d37b39dc618.jpg"></p>
+<ul>
+<li><h2 id="设置对结果的监控"><a href="#设置对结果的监控" class="headerlink" title="设置对结果的监控"></a>设置对结果的监控</h2><h3 id="添加一个Line-Graph-实际上监控了每次单独的仿真中目标值的结果"><a href="#添加一个Line-Graph-实际上监控了每次单独的仿真中目标值的结果" class="headerlink" title="添加一个Line Graph 实际上监控了每次单独的仿真中目标值的结果"></a>添加一个Line Graph 实际上监控了每次单独的仿真中目标值的结果</h3><p><img src="https://pic.downk.cc/item/5fee891e3ffa7d37b39dd31d.jpg"></p>
+</li>
+</ul>
+<p><img src="https://pic.downk.cc/item/5fee8a0d3ffa7d37b39e3136.jpg"></p>
+<h3 id="补充一个Pareto-帕累托图的监控"><a href="#补充一个Pareto-帕累托图的监控" class="headerlink" title="补充一个Pareto 帕累托图的监控"></a>补充一个Pareto 帕累托图的监控</h3><p><img src="https://pic.downk.cc/item/5fee8a503ffa7d37b39e479b.jpg"></p>
+<ul>
+<li><h2 id="监控结果展示"><a href="#监控结果展示" class="headerlink" title="监控结果展示"></a>监控结果展示</h2><p>两排图像，第一排为目标值，第二排为Pareto</p>
+</li>
+</ul>
+<p><img src="https://pic.downk.cc/item/5fee8ad83ffa7d37b39e8753.jpg"></p>
+<h3 id="Pareto图中显示了不同应变量对自变量变化的敏感性"><a href="#Pareto图中显示了不同应变量对自变量变化的敏感性" class="headerlink" title="Pareto图中显示了不同应变量对自变量变化的敏感性"></a>Pareto图中显示了不同应变量对自变量变化的敏感性</h3><h4 id="应力与自变量间的关系"><a href="#应力与自变量间的关系" class="headerlink" title="应力与自变量间的关系"></a>应力与自变量间的关系</h4><p><img src="https://pic.downk.cc/item/5fee8b6b3ffa7d37b39edb40.jpg"></p>
+<h4 id="质量与自变量间的关系"><a href="#质量与自变量间的关系" class="headerlink" title="质量与自变量间的关系"></a>质量与自变量间的关系</h4><p><img src="https://pic.downk.cc/item/5fee8b993ffa7d37b39ef04f.jpg"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/01/01/ISight-Demo/" data-id="ckjdmu5vj0000gwup4tjr0ajj" data-title="ISight Demo" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ISight%E7%BB%8F%E5%85%B8%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%E8%A7%86%E9%A2%91%E7%B3%BB%E5%88%97/" rel="tag">ISight经典入门教程视频系列</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iSight/" rel="tag">iSight</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/01/01/%E4%BB%80%E4%B9%88%E6%98%AFPareto%E5%9B%BE/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          什么是Pareto图
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/12/30/%E4%BA%8C%E6%AC%A1%E5%BC%80%E5%8F%91P5-RSG%E5%BB%BA%E7%AB%8B-%E9%93%86%E9%92%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">二次开发P5 RSG建立 铆钉</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Abaqus/" rel="tag">Abaqus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ISight%E7%BB%8F%E5%85%B8%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%E8%A7%86%E9%A2%91%E7%B3%BB%E5%88%97/" rel="tag">ISight经典入门教程视频系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Pareto/" rel="tag">Pareto</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/abaqus/" rel="tag">abaqus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iSight/" rel="tag">iSight</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8C%E6%AC%A1%E5%BC%80%E5%8F%91/" rel="tag">二次开发</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A1%A5%E6%A2%81%E5%B7%A5%E7%A8%8B/" rel="tag">桥梁工程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%88%AC%E8%A7%86%E9%A2%91/" rel="tag">爬视频</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%B3%BB%E7%BB%9F%E6%93%8D%E4%BD%9C/" rel="tag">系统操作</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Abaqus/" style="font-size: 10px;">Abaqus</a> <a href="/tags/ISight%E7%BB%8F%E5%85%B8%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%E8%A7%86%E9%A2%91%E7%B3%BB%E5%88%97/" style="font-size: 10px;">ISight经典入门教程视频系列</a> <a href="/tags/Pareto/" style="font-size: 10px;">Pareto</a> <a href="/tags/abaqus/" style="font-size: 17.5px;">abaqus</a> <a href="/tags/iSight/" style="font-size: 12.5px;">iSight</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/%E4%BA%8C%E6%AC%A1%E5%BC%80%E5%8F%91/" style="font-size: 15px;">二次开发</a> <a href="/tags/%E6%A1%A5%E6%A2%81%E5%B7%A5%E7%A8%8B/" style="font-size: 10px;">桥梁工程</a> <a href="/tags/%E7%88%AC%E8%A7%86%E9%A2%91/" style="font-size: 10px;">爬视频</a> <a href="/tags/%E7%B3%BB%E7%BB%9F%E6%93%8D%E4%BD%9C/" style="font-size: 12.5px;">系统操作</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/01/07/Abaqus%E5%9C%A8%E6%A1%A5%E6%A2%81%E5%B7%A5%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/">Abaqus在桥梁工程中的应用</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/01/%E4%BB%80%E4%B9%88%E6%98%AFPareto%E5%9B%BE/">什么是Pareto图</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/01/ISight-Demo/">ISight Demo</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/30/%E4%BA%8C%E6%AC%A1%E5%BC%80%E5%8F%91P5-RSG%E5%BB%BA%E7%AB%8B-%E9%93%86%E9%92%89/">二次开发P5 RSG建立 铆钉</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/30/python%E7%9A%84%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%20%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E7%AD%89/">python的文件操作 修改时间等</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
