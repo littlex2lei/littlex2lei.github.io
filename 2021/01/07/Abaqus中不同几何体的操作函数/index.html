@@ -4,24 +4,21 @@
   <meta charset="utf-8">
   
   
-  <title>Python访问ODB数据 | Hexo</title>
+  <title>Abaqus中不同几何体的操作函数 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="本篇主要记录下python如何访问Abaqus计算得到的ODB文件">
+  <meta name="description" content="Abaqus中不同几何体的操作函数">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python访问ODB数据">
-<meta property="og:url" content="http://example.com/2020/12/20/Python%E8%AE%BF%E9%97%AEODB%E6%95%B0%E6%8D%AE/index.html">
+<meta property="og:title" content="Abaqus中不同几何体的操作函数">
+<meta property="og:url" content="http://example.com/2021/01/07/Abaqus%E4%B8%AD%E4%B8%8D%E5%90%8C%E5%87%A0%E4%BD%95%E4%BD%93%E7%9A%84%E6%93%8D%E4%BD%9C%E5%87%BD%E6%95%B0/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="本篇主要记录下python如何访问Abaqus计算得到的ODB文件">
+<meta property="og:description" content="Abaqus中不同几何体的操作函数">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://pic.downk.cc/item/5fdead5f3ffa7d37b31e6a26.jpg">
-<meta property="article:published_time" content="2020-12-20T01:12:05.000Z">
-<meta property="article:modified_time" content="2020-12-22T07:41:26.066Z">
+<meta property="article:published_time" content="2021-01-07T13:50:00.000Z">
+<meta property="article:modified_time" content="2021-01-11T07:46:00.565Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="abaqus">
-<meta property="article:tag" content="python">
 <meta property="article:tag" content="二次开发">
+<meta property="article:tag" content="Abaqus">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://pic.downk.cc/item/5fdead5f3ffa7d37b31e6a26.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -78,10 +75,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-Python访问ODB数据" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-Abaqus中不同几何体的操作函数" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2020/12/20/Python%E8%AE%BF%E9%97%AEODB%E6%95%B0%E6%8D%AE/" class="article-date">
-  <time class="dt-published" datetime="2020-12-20T01:12:05.000Z" itemprop="datePublished">2020-12-20</time>
+    <a href="/2021/01/07/Abaqus%E4%B8%AD%E4%B8%8D%E5%90%8C%E5%87%A0%E4%BD%95%E4%BD%93%E7%9A%84%E6%93%8D%E4%BD%9C%E5%87%BD%E6%95%B0/" class="article-date">
+  <time class="dt-published" datetime="2021-01-07T13:50:00.000Z" itemprop="datePublished">2021-01-07</time>
 </a>
     
   </div>
@@ -92,7 +89,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      Python访问ODB数据
+      Abaqus中不同几何体的操作函数
     </h1>
   
 
@@ -100,37 +97,62 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h3 id="本篇主要记录下python如何访问Abaqus计算得到的ODB文件"><a href="#本篇主要记录下python如何访问Abaqus计算得到的ODB文件" class="headerlink" title="本篇主要记录下python如何访问Abaqus计算得到的ODB文件"></a>本篇主要记录下python如何访问Abaqus计算得到的ODB文件</h3><a id="more"></a>
+        <p>Abaqus中不同几何体的操作函数</p>
+<a id="more"></a>
 
-
-<h3 id="0-引言"><a href="#0-引言" class="headerlink" title="0.引言"></a>0.引言</h3><p><img src="https://pic.downk.cc/item/5fdead5f3ffa7d37b31e6a26.jpg" alt="ODB中包含的对象"></p>
-<p>对象模型实质上是Abaqus脚本接口命令的结构层次关系<br>odb.steps[‘10 hz vibration’].frames[3].fieldOutputs[‘U’].values[47]</p>
-<p>如果不了解输出数据库结构，可以在命令行接口中调用以下命令査看对象的所有成员：<br><strong>objectname.<strong>members</strong></strong></p>
-<h3 id="1-Abaqus脚本接口功能"><a href="#1-Abaqus脚本接口功能" class="headerlink" title="1.Abaqus脚本接口功能"></a>1.Abaqus脚本接口功能</h3><h3 id="2-Abaqus中不同类型的脚本接口"><a href="#2-Abaqus中不同类型的脚本接口" class="headerlink" title="2.Abaqus中不同类型的脚本接口"></a>2.Abaqus中不同类型的脚本接口</h3><p>Python是abaqus的标准编程语言。除了命令行接口之外，Abaqus还提供了下列脚本接口； </p>
-<p>1）环境文件abaqus_v6.env中使用的是Python语句,详细介绍请见《Abaqus Scripting User’s Manual》6.9 节 “ Using Abaqus Scripting Interface commands in your environment file<br>2） INP文件中* PARAMETER数据行中的参数定义使用的是Python语句。关于* PA- RAMETER用法的详细介绍，请参见Abaqus 6. 10帮助手册《Abaqus Keywords Reference Man- ual》o<br>3） 运行参数分析需要编写和执行Python脚本(.psf)<br>4） Abaqus/CAE将所有的命令记录在扩展名为.rpy的文件中，这类文件中的所有命令均为Python访句。<br>5） 在Abaqus/CAE的File菜单下选择Run Script,可以直接运行脚本。<br>6） 在Abaqus/CAE的File菜单下选择Macro Manager,可以录制宏。</p>
-<h3 id="abaqus中脚本运行方法"><a href="#abaqus中脚本运行方法" class="headerlink" title="abaqus中脚本运行方法"></a>abaqus中脚本运行方法</h3><ul>
-<li><p><strong>启动Abaqus/CAE的同时运行脚本</strong><br>成熟的回测程序减少了清理数据并进行迭代等策略测试中所必须的繁琐过程。它具有可用于各种数据源的内置函数，保证数据导入更加容易。</p>
-</li>
-<li><p><strong>不启动Abaqus/CAE而直接运行脚本</strong><br>策略参数的调整有时可能带来同类策略是否盈利的差别。运行回测后，只需更改几行代码即可轻松完成优化。</p>
-</li>
-<li><p><strong>从启动屏幕（startup screen）运行脚本</strong><br>Python的绘图工具并不是十分友好，尤其是第一次使用时。在Backtrader中可用少量代码创建复杂的图表。</p>
-</li>
-</ul>
-<ul>
-<li><strong>从File菜单运行脚本</strong></li>
-</ul>
-<ul>
-<li><strong>从命令行接口运行脚本</strong></li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>findAt</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>getBoundingBox</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>getByBoundingBox</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>getByBoundingCylinder</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>getByBoundingSphere</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>getClosest</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>getExteriorEdges</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>getMask</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>getSequenceFromMask</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>index</strong></td>
+<td></td>
+</tr>
+</tbody></table>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/12/20/Python%E8%AE%BF%E9%97%AEODB%E6%95%B0%E6%8D%AE/" data-id="ckiwgjjs400004gup1mu64wlb" data-title="Python访问ODB数据" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/01/07/Abaqus%E4%B8%AD%E4%B8%8D%E5%90%8C%E5%87%A0%E4%BD%95%E4%BD%93%E7%9A%84%E6%93%8D%E4%BD%9C%E5%87%BD%E6%95%B0/" data-id="ckjs9i3ul0000hsup9lpccvfb" data-title="Abaqus中不同几何体的操作函数" class="article-share-link">Share</a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/abaqus/" rel="tag">abaqus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BA%8C%E6%AC%A1%E5%BC%80%E5%8F%91/" rel="tag">二次开发</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Abaqus/" rel="tag">Abaqus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BA%8C%E6%AC%A1%E5%BC%80%E5%8F%91/" rel="tag">二次开发</a></li></ul>
 
     </footer>
   </div>
@@ -138,19 +160,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/12/21/%E9%87%87%E7%94%A8abaqus-python%E5%91%BD%E4%BB%A4%E6%B5%81%E5%88%86%E6%9E%90%E9%92%A2%E6%A2%81%E5%A1%91%E6%80%A7%E5%8A%A0%E8%BD%BD/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/01/11/Abaqus%E8%AF%AD%E8%A8%80%E5%88%87%E6%8D%A2/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          采用abaqus+python命令流分析钢梁塑性加载
+          Abaqus语言切换
         
       </div>
     </a>
   
   
-    <a href="/2020/12/19/abaqus%E5%92%8Cpython%E7%9A%84%E6%8E%A5%E5%8F%A3/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/01/07/Abaqus%E4%B8%AD%E7%9A%84Model-Change%E6%A8%A1%E6%8B%9F%E7%94%9F%E6%AD%BB%E5%8D%95%E5%85%83/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">abaqus和python的接口</div>
+      <div class="article-nav-title">Abaqus中的Model Change模拟生死单元</div>
     </a>
   
 </nav>
