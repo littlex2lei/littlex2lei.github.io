@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="点云地面分割以下为点云分割源码 1234567891011121314151617181920212223242526272829303132333435363738394041#ifndef EXTRACTGROUND_H#define EXTRACTGROUND_H#include &lt;pcl&#x2F;point_types.h&gt;#include &lt;pcl&#x2F;point_cloud.h&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="点云地面提取&#x2F;分割">
+<meta property="og:url" content="http://example.com/2023/10/08/%E7%82%B9%E4%BA%91%E5%9C%B0%E9%9D%A2%E6%8F%90%E5%8F%96-%E5%88%86%E5%89%B2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="点云地面分割以下为点云分割源码 1234567891011121314151617181920212223242526272829303132333435363738394041#ifndef EXTRACTGROUND_H#define EXTRACTGROUND_H#include &lt;pcl&#x2F;point_types.h&gt;#include &lt;pcl&#x2F;point_cloud.h&amp;">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-10-08T01:35:09.000Z">
+<meta property="article:modified_time" content="2023-10-08T01:51:41.704Z">
+<meta property="article:author" content="Jun LEI">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2023/10/08/%E7%82%B9%E4%BA%91%E5%9C%B0%E9%9D%A2%E6%8F%90%E5%8F%96-%E5%88%86%E5%89%B2/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2023/10/08/%E7%82%B9%E4%BA%91%E5%9C%B0%E9%9D%A2%E6%8F%90%E5%8F%96-%E5%88%86%E5%89%B2/","path":"2023/10/08/点云地面提取-分割/","title":"点云地面提取/分割"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>点云地面提取/分割 | Hexo</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hexo</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%82%B9%E4%BA%91%E5%9C%B0%E9%9D%A2%E5%88%86%E5%89%B2"><span class="nav-number">1.</span> <span class="nav-text">点云地面分割</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E8%A7%A3%E9%87%8A"><span class="nav-number">1.1.</span> <span class="nav-text">代码解释</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Extract-ground-pts"><span class="nav-number">1.1.1.</span> <span class="nav-text">Extract_ground_pts</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">参数说明</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Get-grid"><span class="nav-number">1.1.2.</span> <span class="nav-text">Get_grid</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E-1"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">参数说明</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Seg-ground-nground-pts"><span class="nav-number">1.1.3.</span> <span class="nav-text">Seg_ground_nground_pts</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E-2"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">参数说明</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E7%82%B9%E4%BA%91%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">其他点云数据处理</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Jun LEI</p>
+  <div class="site-description" itemprop="description">Here is my Space</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/08/%E7%82%B9%E4%BA%91%E5%9C%B0%E9%9D%A2%E6%8F%90%E5%8F%96-%E5%88%86%E5%89%B2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jun LEI">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="Here is my Space">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="点云地面提取/分割 | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          点云地面提取/分割
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-10-08 09:35:09 / Modified: 09:51:41" itemprop="dateCreated datePublished" datetime="2023-10-08T09:35:09+08:00">2023-10-08</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="点云地面分割"><a href="#点云地面分割" class="headerlink" title="点云地面分割"></a>点云地面分割</h1><p>以下为点云分割源码</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">ifndef</span> EXTRACTGROUND_H</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> EXTRACTGROUND_H</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pcl/point_types.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pcl/point_cloud.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pcl/features/normal_3d.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pcl/filters/project_inliers.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pcl/ModelCoefficients.h&gt;</span></span></span><br><span class="line"><span class="comment">//#include &lt;pcl/visualization/pcl_visualizer.h&gt;</span></span><br><span class="line"><span class="comment">//#include &lt;pcl/visualization/cloud_viewer.h&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;utility.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//Reference: Two-step adaptive extraction method for ground points and breaklines from lidar point clouds, Bisheng Yang, Ronggang Huang, et al. ISPRS Journal of Photogrammetry and Remote Sensing</span></span><br><span class="line"><span class="keyword">namespace</span> roadmarking</span><br><span class="line">&#123;  </span><br><span class="line">	<span class="keyword">class</span> <span class="title class_">Ground_Extraction</span></span><br><span class="line">	&#123;</span><br><span class="line">	<span class="keyword">public</span>:</span><br><span class="line">		<span class="built_in">Ground_Extraction</span>();</span><br><span class="line">		<span class="function"><span class="type">void</span> <span class="title">Extract_ground_pts</span><span class="params">(pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr cloud,</span></span></span><br><span class="line"><span class="params"><span class="function">			pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr ground_cloud,</span></span></span><br><span class="line"><span class="params"><span class="function">			pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr no_ground_cloud,</span></span></span><br><span class="line"><span class="params"><span class="function">			Bounds bounds, CenterPoint center_pt)</span></span>;<span class="comment">//提取地面点函数		</span></span><br><span class="line">	<span class="keyword">protected</span>:</span><br><span class="line">	<span class="keyword">private</span>:</span><br><span class="line">		<span class="function"><span class="type">void</span> <span class="title">Get_grid</span><span class="params">(pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr cloud,</span></span></span><br><span class="line"><span class="params"><span class="function">			<span class="type">double</span> max_x, <span class="type">double</span> max_y, <span class="type">double</span> min_x, <span class="type">double</span> min_y,</span></span></span><br><span class="line"><span class="params"><span class="function">			<span class="type">int</span> row, <span class="type">int</span> list, <span class="type">int</span> num_voxel, Voxel* grid, pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr no_ground_cloud)</span></span>;</span><br><span class="line">			</span><br><span class="line">		<span class="function"><span class="type">void</span> <span class="title">Seg_ground_nground_pts</span><span class="params">(pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr cloud,</span></span></span><br><span class="line"><span class="params"><span class="function">			pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr ground_cloud,</span></span></span><br><span class="line"><span class="params"><span class="function">			pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr no_ground_cloud,</span></span></span><br><span class="line"><span class="params"><span class="function">			Voxel* grid, <span class="type">int</span> num_voxel)</span></span>;</span><br><span class="line">		<span class="type">float</span> grid_res_;</span><br><span class="line">		<span class="type">int</span>   min_pt_num_grid_;</span><br><span class="line">		<span class="type">float</span> max_height_diff_;</span><br><span class="line">		<span class="type">float</span> max_nei_height_diff_; </span><br><span class="line">	&#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="代码解释"><a href="#代码解释" class="headerlink" title="代码解释"></a>代码解释</h2><h3 id="Extract-ground-pts"><a href="#Extract-ground-pts" class="headerlink" title="Extract_ground_pts"></a>Extract_ground_pts</h3><h4 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h4><ul>
+<li>pcl::PointCloud<a href="pcl::PointXYZI">pcl::PointXYZI</a>::Ptr cloud</li>
+<li>pcl::PointCloud<a href="pcl::PointXYZI">pcl::PointXYZI</a>::Ptr ground_cloud</li>
+<li>pcl::PointCloud<a href="pcl::PointXYZI">pcl::PointXYZI</a>::Ptr no_ground_cloud</li>
+<li>Bounds bounds</li>
+<li>CenterPoint center_pt</li>
+</ul>
+<h3 id="Get-grid"><a href="#Get-grid" class="headerlink" title="Get_grid"></a>Get_grid</h3><h4 id="参数说明-1"><a href="#参数说明-1" class="headerlink" title="参数说明"></a>参数说明</h4><ul>
+<li>pcl::PointCloud<a href="pcl::PointXYZI">pcl::PointXYZI</a>::Ptr cloud</li>
+<li>double max_x</li>
+<li>double max_y</li>
+<li>double min_x</li>
+<li>double min_y</li>
+<li>int row</li>
+<li>int list</li>
+<li>int num_voxel</li>
+<li>Voxel* grid</li>
+<li>pcl::PointCloud<a href="pcl::PointXYZI">pcl::PointXYZI</a>::Ptr no_ground_cloud</li>
+</ul>
+<h3 id="Seg-ground-nground-pts"><a href="#Seg-ground-nground-pts" class="headerlink" title="Seg_ground_nground_pts"></a>Seg_ground_nground_pts</h3><h4 id="参数说明-2"><a href="#参数说明-2" class="headerlink" title="参数说明"></a>参数说明</h4><ul>
+<li>pcl::PointCloud<a href="pcl::PointXYZI">pcl::PointXYZI</a>::Ptr cloud</li>
+<li>pcl::PointCloud<a href="pcl::PointXYZI">pcl::PointXYZI</a>::Ptr ground_cloud</li>
+<li>pcl::PointCloud<a href="pcl::PointXYZI">pcl::PointXYZI</a>::Ptr no_ground_cloud</li>
+<li>Voxel* grid</li>
+<li>int num_voxel</li>
+</ul>
+<hr>
+<h1 id="其他点云数据处理"><a href="#其他点云数据处理" class="headerlink" title="其他点云数据处理"></a>其他点云数据处理</h1><span id="more"></span>
+<p>对点云数据的处理主要包含</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#ifndef SEGMENTATION_H</span></span><br><span class="line"><span class="comment">#define SEGMENTATION_H</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#include &quot;utility.h&quot;</span></span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line">namespace roadmarking</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">class</span> <span class="title class_">Csegmentation</span></span><br><span class="line">	&#123;</span><br><span class="line">	public:</span><br><span class="line">		Csegmentation(<span class="built_in">float</span> res)&#123; resolution = res; &#125;;</span><br><span class="line">		void GroundFilter_PMF(const pcXYZIPtr &amp;cloud, pcXYZIPtr &amp;gcloud, pcXYZIPtr &amp;ngcloud);   // PMF </span><br><span class="line">		void GroundFilter_PMF(const pcXYZIPtr &amp;cloud, pcXYZIPtr &amp;gcloud, pcXYZIPtr &amp;ngcloud, <span class="built_in">int</span> max_window_size, <span class="built_in">float</span> slope, <span class="built_in">float</span> initial_distance, <span class="built_in">float</span> max_distance);   // PMF �������˲� ��������;</span><br><span class="line">		pcXYZIPtr planesegRansac(const pcXYZIPtr &amp;cloud, <span class="built_in">float</span> threshold);   //Ransac </span><br><span class="line">		pcXYZIPtr groundprojection(const pcXYZIPtr &amp;cloud);                 </span><br><span class="line">		void cloudFilter(const vector&lt;pcXYZI&gt; &amp;inclouds, vector&lt;pcXYZI&gt; &amp;outclouds, <span class="built_in">int</span> N, <span class="built_in">int</span> MeanK, double std);  //Otsu Intensity Thresholding + SOR Filter </span><br><span class="line">		void SORFilter(const pcXYZI &amp;inclouds, pcXYZI &amp;outclouds, <span class="built_in">int</span> MeanK, double std); //SOR (Statisics Outliers Remover)  </span><br><span class="line">		void NFilter(const vector&lt;pcXYZI&gt; &amp;inclouds, vector&lt;pcXYZI&gt; &amp;outclouds, <span class="built_in">int</span> K);</span><br><span class="line">		void BoundingInformation(const vector&lt;pcXYZI&gt; &amp;clouds, vector&lt;vector&lt;pcl::PointXYZI&gt;&gt; &amp; boundingdatas); //bounding <span class="number">4</span> points </span><br><span class="line">		void BoundingFeatureCalculation(const vector&lt;vector&lt;pcl::PointXYZI&gt;&gt; &amp; boundingdatas, vector&lt;BoundingFeature&gt; &amp; boundingfeatures); //bounding <span class="number">4</span> points</span><br><span class="line">		void BoundaryExtraction(const vector&lt;pcXYZI&gt; &amp;clouds, vector&lt;pcXYZI&gt; &amp;boundaryclouds, <span class="built_in">int</span> down_rate=<span class="number">1</span>, <span class="built_in">float</span> alpha_value_scale = <span class="number">0.8</span>);                 </span><br><span class="line">		void CornerExtraction(const vector&lt;pcXYZI&gt; &amp;boundaryclouds, vector&lt;pcXYZI&gt; &amp;cornerclouds, <span class="built_in">bool</span> UseRadius, <span class="built_in">int</span> K, <span class="built_in">float</span> radius, <span class="built_in">float</span> dis_threshold, <span class="built_in">float</span> maxcos);</span><br><span class="line">		void CategoryJudgementBox_highway(const vector&lt;BoundingFeature&gt; &amp; boundingfeatures, RoadMarkings &amp; roadmarkings);</span><br><span class="line">		void CategoryJudgementBox_cityroad(const vector&lt;BoundingFeature&gt; &amp; boundingfeatures, RoadMarkings &amp; roadmarkings);</span><br><span class="line">		void CombineSideLines(const RoadMarkings &amp; roadmarkings, double combine_length, RoadMarkings &amp; combine_sideline_markings); </span><br><span class="line">		void Find_head2tail(<span class="built_in">int</span> head_index, const vector&lt;vector&lt;double&gt;&gt; &amp; d_head_tail, vector&lt;<span class="built_in">bool</span>&gt; &amp; line_used, vector&lt;<span class="built_in">int</span>&gt; &amp; combineline, double combine_length);   </span><br><span class="line">		void Find_tail2head(<span class="built_in">int</span> tail_index, const vector&lt;vector&lt;double&gt;&gt; &amp; d_tail_head, vector&lt;<span class="built_in">bool</span>&gt; &amp; line_used, vector&lt;<span class="built_in">int</span>&gt; &amp; combineline, double combine_length);   		</span><br><span class="line">		void MarkingVectorization_highway(const vector&lt;pcXYZI&gt; &amp;clouds, const vector&lt;vector&lt;pcl::PointXYZI&gt;&gt; &amp;boundingdatas,RoadMarkings &amp; roadmarkings,  double line_sample_dl, double ambiguousRatio);  </span><br><span class="line">		void MarkingVectorization_cityroad(const vector&lt;pcXYZI&gt; &amp;clouds, const vector&lt;vector&lt;pcl::PointXYZI&gt;&gt; &amp;boundingdatas, RoadMarkings &amp; roadmarkings, double line_sample_dl, double ambiguousRatio);  </span><br><span class="line">		void GetRoadmarkingsForVect(RoadMarkings &amp; roadmarkings, RoadMarkings &amp; roadmarkings_sideline, RoadMarkings &amp; roadmarkings_vect);</span><br><span class="line">		pcXYZI alphashape(const pcXYZI &amp;cloud, <span class="built_in">float</span> alpha_value);   //Concave Hull Generation		</span><br><span class="line">		pcXYZI CornerpointKNN(const pcXYZI &amp;boundarycloud, <span class="built_in">int</span> K, <span class="built_in">float</span> disthreshold, <span class="built_in">float</span> maxcos);                   //KNN corner point extraction </span><br><span class="line">		pcXYZI CornerpointRadius(const pcXYZI &amp;boundarycloud, <span class="built_in">float</span> radius, <span class="built_in">float</span> disthreshold, <span class="built_in">float</span> maxcos);         //Radius corner point extraction </span><br><span class="line"></span><br><span class="line">		//pcXYZI CornerClusteringKMeans(const pcXYZI &amp;cornercloud, <span class="built_in">int</span> K);</span><br><span class="line"></span><br><span class="line">		</span><br><span class="line">	protected:</span><br><span class="line">	</span><br><span class="line">	private:</span><br><span class="line">		<span class="built_in">float</span> resolution;</span><br><span class="line">		</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#endif</span></span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/10/08/%E9%81%93%E8%B7%AF%E6%A0%87%E7%BA%BF%E6%8F%90%E5%8F%96/" rel="prev" title="道路标线提取">
+                  <i class="fa fa-angle-left"></i> 道路标线提取
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Jun LEI</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
