@@ -19,25 +19,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Here is my Space">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+    <meta name="description" content="介绍本文解析了 https:&#x2F;&#x2F;github.com&#x2F;YuePanEdward&#x2F;RoadMarkingExtraction中的代码。以下正文来源于原仓库中的”帮助文档（中文版）”以及对其代码的理解。 程序名：道路标线提取程序功能：实现多平台道路点云标线自动提取，分类，矢量化应用场景：高速公路，城市道路适用点云采集方式：MLS（推荐），TLS，ALS script level 41234567891">
+<meta property="og:type" content="article">
+<meta property="og:title" content="道路标线提取">
+<meta property="og:url" content="http://example.com/2023/10/08/%E9%81%93%E8%B7%AF%E6%A0%87%E7%BA%BF%E6%8F%90%E5%8F%96/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Here is my Space">
+<meta property="og:description" content="介绍本文解析了 https:&#x2F;&#x2F;github.com&#x2F;YuePanEdward&#x2F;RoadMarkingExtraction中的代码。以下正文来源于原仓库中的”帮助文档（中文版）”以及对其代码的理解。 程序名：道路标线提取程序功能：实现多平台道路点云标线自动提取，分类，矢量化应用场景：高速公路，城市道路适用点云采集方式：MLS（推荐），TLS，ALS script level 41234567891">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-10-08T01:19:58.000Z">
+<meta property="article:modified_time" content="2023-10-08T01:24:51.341Z">
 <meta property="article:author" content="Jun LEI">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2023/10/08/%E9%81%93%E8%B7%AF%E6%A0%87%E7%BA%BF%E6%8F%90%E5%8F%96/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2023/10/08/%E9%81%93%E8%B7%AF%E6%A0%87%E7%BA%BF%E6%8F%90%E5%8F%96/","path":"2023/10/08/道路标线提取/","title":"道路标线提取"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Hexo</title>
+<title>道路标线提取 | Hexo</title>
   
 
 
@@ -67,7 +69,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Hexo</h1>
+      <p class="site-title">Hexo</p>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -89,7 +91,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -102,6 +104,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -131,16 +134,17 @@
 
     </div>
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/08/%E9%81%93%E8%B7%AF%E6%A0%87%E7%BA%BF%E6%8F%90%E5%8F%96/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -154,13 +158,13 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="name" content="道路标线提取 | Hexo">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/10/08/%E9%81%93%E8%B7%AF%E6%A0%87%E7%BA%BF%E6%8F%90%E5%8F%96/" class="post-title-link" itemprop="url">道路标线提取</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          道路标线提取
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -183,11 +187,9 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>本文解析了 <a target="_blank" rel="noopener" href="https://github.com/YuePanEdward/RoadMarkingExtraction%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%A0%81%E3%80%82">https://github.com/YuePanEdward/RoadMarkingExtraction中的代码。</a><br>以下正文来源于原仓库中的”帮助文档（中文版）”以及对其代码的理解。</p>
+    <div class="post-body" itemprop="articleBody"><h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>本文解析了 <a target="_blank" rel="noopener" href="https://github.com/YuePanEdward/RoadMarkingExtraction%E4%B8%AD%E7%9A%84%E4%BB%A3%E7%A0%81%E3%80%82">https://github.com/YuePanEdward/RoadMarkingExtraction中的代码。</a><br>以下正文来源于原仓库中的”帮助文档（中文版）”以及对其代码的理解。</p>
 <p>程序名：道路标线提取程序<br>功能：实现多平台道路点云标线自动提取，分类，矢量化<br>应用场景：高速公路，城市道路<br>适用点云采集方式：MLS（推荐），TLS，ALS</p>
 <figure class="highlight plaintext"><figcaption><span>script level 4</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br></pre></td><td class="code"><pre><span class="line">#include &quot;data_io.h&quot;</span><br><span class="line">#include &quot;utility.h&quot;</span><br><span class="line">#include &quot;ground_extraction.h&quot;</span><br><span class="line">#include &quot;pointcloudprocess.h&quot;</span><br><span class="line">#include &quot;imageprocess.h&quot;</span><br><span class="line">#include &quot;modelmatch.h&quot;</span><br><span class="line">#include &lt;chrono&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">using namespace roadmarking;</span><br><span class="line">using namespace cv;</span><br><span class="line"></span><br><span class="line">int main(int argc, char *argv[])</span><br><span class="line">&#123;</span><br><span class="line">    /*if (argc &lt; 3)</span><br><span class="line">    &#123;</span><br><span class="line">        printf(&quot;Syntax is: %s input_file.las output_folder [model_pool] [config_file]\n&quot;, argv[0]);</span><br><span class="line">        return (-1);</span><br><span class="line">    &#125;</span><br><span class="line">    std::string inputFilePath = argv[1];</span><br><span class="line">    std::string outputFolderPath = argv[2];</span><br><span class="line">    std::string model_path = &quot;./model_pool/models_urban_example/&quot;;</span><br><span class="line">    std::string parm_file = &quot;./config/parameter_urban_example.txt&quot;;</span><br><span class="line"></span><br><span class="line">    if (argc == 3)</span><br><span class="line">        printf(&quot;Model pool path and configuration file are not specified, use the default model pool and parameters.\n&quot;);</span><br><span class="line">    if (argc == 4)</span><br><span class="line">    &#123;</span><br><span class="line">        model_path = argv[3];</span><br><span class="line">        printf(&quot;Configuration file is not specified, use the default parameters.\n&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    if (argc &gt;= 5)</span><br><span class="line">    &#123;</span><br><span class="line">        model_path = argv[3];</span><br><span class="line">        parm_file = argv[4];</span><br><span class="line">    &#125;*/</span><br><span class="line">    std::string inputFilePath = &quot;D:\\Program Files\\CloudCompare\\test_las_1007_003.las&quot;;</span><br><span class="line">    std::string outputFolderPath = &quot;F:\\0Program\\PointCloudProgram\\RoadMarkingExtraction-master\\output&quot;;</span><br><span class="line">    std::string model_path =&quot;F:\\0Program\\PointCloudProgram\\RoadMarkingExtraction-master\\model_pool\\models_urban_example&quot;;</span><br><span class="line">    std::string parm_file =&quot;F:\\0Program\\PointCloudProgram\\RoadMarkingExtraction - master\\config\\parameter_urban_example.txt&quot;;</span><br><span class="line"></span><br><span class="line">    /*-------------------------------------------------Readme----------------------------------------------------*/</span><br><span class="line">    //[Road Markings Extraction, Classification and Vectorization]</span><br><span class="line">    //Brief: Roadmarking extraction, classification (long sidelines, short dash lines, all kinds of arrows,</span><br><span class="line">    //signs, etc.) and vectorization</span><br><span class="line">    //Basic method:</span><br><span class="line">    //1. ground segmentation and generate geo-referneced images</span><br><span class="line">    //2. Image processing -&gt; get roadmarking pixels</span><br><span class="line">    //3. retrieve roadmarking point clouds from the pixels and apply filtering</span><br><span class="line">    //4. classify the roadmarkings into 9 categories based on bounding box geometric feature and template</span><br><span class="line">    //(model) matching</span><br><span class="line">    //5. combine or delete some of the roadmarkings and then do vectorization based on bounding box and template</span><br><span class="line">    //localization information</span><br><span class="line">    //Implementation:</span><br><span class="line">    //Dependent 3rd Party Libs: Eigen 3, PCL 1.7, OpenCV 2, Liblas, GDAL(optional), LASLib(optional)</span><br><span class="line">    //Point Cloud Acquisition Platform: mainly MLS</span><br><span class="line">    //Application Scenarios: Highway, Urban Road</span><br><span class="line">    //Author: Yue Pan et al. @ WHU</span><br><span class="line">    /*-----------------------------------------------------------------------------------------------------------*/</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; &quot;-------------------------------------------------------------&quot; &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; &quot;Road Markings Extraction Module&quot; &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    /*-----------------------------------------------Declaration-------------------------------------------------*/</span><br><span class="line">    clock_t t1, t2; // Timing</span><br><span class="line">    //Step 1</span><br><span class="line">    DataIo io; // Data IO class</span><br><span class="line">    //string foldername, paralistfile;    // Las Data folder name ; Parameter list file name</span><br><span class="line"></span><br><span class="line">    int datatype, roadtype, is_road_extracted; // datatype: (1.MLS/TLS 2.ALS) ;  roadtype: (1.Highway 2.City Road) ; density: approximate point number per m^2</span><br><span class="line">    float resolution;                          // Projection Image&#x27;s pixel size (m)</span><br><span class="line"></span><br><span class="line">    datatype = 1;          //MLS</span><br><span class="line">    is_road_extracted = 0; //not extracted</span><br><span class="line"></span><br><span class="line">    io.readParalist(parm_file);</span><br><span class="line"></span><br><span class="line">    roadtype = io.paralist.road_type;</span><br><span class="line">    float density = io.paralist.expected_point_num_per_m_square;</span><br><span class="line">    resolution = io.paralist.grid_resolution;</span><br><span class="line">    if (io.paralist.visualization_on)</span><br><span class="line">        cout &lt;&lt; &quot;Visualization on&quot; &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    io.displayparameter(datatype, roadtype, is_road_extracted);</span><br><span class="line"></span><br><span class="line">    t1 = clock();</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; &quot;-------------------------------------------------------------&quot; &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; &quot;Processing File : &quot; &lt;&lt; inputFilePath &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    //Timing</span><br><span class="line"></span><br><span class="line">    //Step 1</span><br><span class="line">    pcXYZIPtr cloud(new pcXYZI());   // Original point clouds</span><br><span class="line">    vector&lt;double&gt; CloudBoundingBox; // Xmin,Ymin,Zmin,Xmax,Ymax,Zmax after translation for Input point cloud;</span><br><span class="line">    Bounds bound_3d_temp;</span><br><span class="line">    double X_origin =0.0, Y_origin=0.0; // X,Y origin before translation;</span><br><span class="line">    //Step 2,3</span><br><span class="line">    pcXYZIPtr fcloud(new pcXYZI());  // Sampled point cloud</span><br><span class="line">    pcXYZIPtr ngcloud(new pcXYZI()); // Non-ground point cloud</span><br><span class="line">    pcXYZIPtr gcloud(new pcXYZI());  // Ground point cloud</span><br><span class="line">    //Step 4</span><br><span class="line">    Mat imgI, imgZ, imgD; // imgI:Intensity Projection Image; imgZ: Elevation Projection Image ; imgD: Density Projection Image</span><br><span class="line">    //Step 5</span><br><span class="line">    Mat imgImf, imgIgradient, imgIgradientroad, imgIbinary, imgZgradient, imgZbinary, imgDbinary, imgIbfilter, labelImg, colorLabelImg, imgFilled, Timg, dilateImg, closeImg, corner, cornerwithimg; // imgImf: Intensity Projection Image after Median Filter ; imgIgradient: Intensity Gradient Image ; imgIgradientroad: Road&#x27;s Intensity Gradient Image ; imgIbinary: Road&#x27;s Intensity Binary Image ; imgZgradient: Slope (dZ) projection image ; imgZbinary: Slope binary image ; imgDbinary: Point density binary image ; imgIbfilter: Intensity Binary Image after filtering (Based on Connected Region&#x27;s area) ; labelImg: Labeled Image based on Connected Conponent Analysis (CCA) ; colorLabelImg :  Labeled Image based on Connected Conponent Analysis (CCA) render by random colors ; imgFilled : Filled Image (the closed geometry are all filled) ; Timg: Truncated Image of Interested area (For Saving computing time) ; dilateImg : Image after dilation morphology calculation ; closeImg : Image after close morphology calculation ; corner : Image corner pixels ; cornerwithimg: Image with its corner pixels</span><br><span class="line">    //Step 6</span><br><span class="line">    //pcXYZIPtr outcloud(new pcXYZI()); //Road Marking Cloud (All in one)</span><br><span class="line">    vector&lt;pcXYZI&gt; outclouds, outcloud_otsu_sor, outcloud_otsu_sor_n, boundaryclouds; //Road Marking Clouds (Segmentation); Filter: Otsu+SOR ; Filter: Point Number ; Boundary Clouds ; Corner Clouds</span><br><span class="line">    //Step 7</span><br><span class="line">    RoadMarkings roadmarkings, sideline_roadmarkings, roadmarkings_vect; // Unit of Road markings (Category + Polyline)</span><br><span class="line">    vector&lt;vector&lt;pcl::PointXYZI&gt;&gt; boundingdatas, modeldatas;            // Unit of Road markings&#x27; bounding box and model datas</span><br><span class="line">    vector&lt;BoundingFeature&gt; boundingfeatures;                            // Unit of Road markings&#x27; bounding box feature</span><br><span class="line">    vector&lt;bool&gt; is_rights;                                              // Unit of Arrow Road markings&#x27; direction</span><br><span class="line"></span><br><span class="line">    //Step 1. Data Import</span><br><span class="line">    string extension = inputFilePath.substr(inputFilePath.find_last_of(&#x27;.&#x27;) + 1); //Get the suffix of the file;</span><br><span class="line">    if (!strcmp(extension.c_str(), &quot;las&quot;))</span><br><span class="line">        io.readLasFile(inputFilePath, *cloud, bound_3d_temp);</span><br><span class="line">    else if (!strcmp(extension.c_str(), &quot;pcd&quot;))</span><br><span class="line">        io.readPcdFile(inputFilePath, cloud, bound_3d_temp);</span><br><span class="line">    else </span><br><span class="line">        printf(&quot;Unrecognized data format. Please use *.pcd or *.las format point cloud.\n&quot;);</span><br><span class="line">    </span><br><span class="line">    X_origin = 0.5 * (bound_3d_temp.min_x + bound_3d_temp.max_x);</span><br><span class="line">    Y_origin = 0.5 * (bound_3d_temp.min_y + bound_3d_temp.max_y); </span><br><span class="line">    cout &lt;&lt; &quot;Import [&quot; &lt;&lt; cloud-&gt;size() &lt;&lt; &quot;] points.&quot; &lt;&lt; endl;</span><br><span class="line">    printf(&quot;Global shift (X: %8.3f m, Y: %8.3f m)\n&quot;, -X_origin, -Y_origin);</span><br><span class="line"></span><br><span class="line">    std::chrono::steady_clock::time_point tic = std::chrono::steady_clock::now();</span><br><span class="line"></span><br><span class="line">    //Step 2. Voxel Down-sampling (Optional)</span><br><span class="line">    /*float voxelSize = 0.02;</span><br><span class="line">		VoxelFilter vfilter(voxelSize);</span><br><span class="line">		fcloud= vfilter.filter(cloud);</span><br><span class="line">		//cout &lt;&lt; &quot;the number of filtered point clouds in file &quot; &lt;&lt; i &lt;&lt; &quot; : &quot; &lt;&lt; fcloud-&gt;size() &lt;&lt; endl;</span><br><span class="line">		&#125;*/</span><br><span class="line"></span><br><span class="line">    //Step 3. Ground Filter and projection (Optional)</span><br><span class="line">    // The Ground Segmentation can help you find the road more precisely. However, this process would take more time.</span><br><span class="line">    // Method 1: Dual-threshold grid based filter (Fast)</span><br><span class="line">    // Parameter Setting: grid_res_ = 0.5, min_pt_num_grid_ = 30, max_height_diff_ = 0.2</span><br><span class="line">    Ground_Extraction ground;</span><br><span class="line">    StructOperator so;</span><br><span class="line">    Bounds bounds;</span><br><span class="line">    CenterPoint center;</span><br><span class="line">    so.getBoundAndCenter(*cloud, bounds, center);</span><br><span class="line">    ground.Extract_ground_pts(cloud, gcloud, ngcloud, bounds, center);</span><br><span class="line">     cout &lt;&lt; &quot;Ground: &quot; &lt;&lt; gcloud-&gt;points.size() &lt;&lt; &quot;, &quot;</span><br><span class="line">          &lt;&lt; &quot;Non-Ground: &quot; &lt;&lt; ngcloud-&gt;points.size() &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; &quot;Ground Segmentation done.\n&quot;;</span><br><span class="line"></span><br><span class="line">    //Method 2: PMF (Slow)</span><br><span class="line">    //seg.GroundFilter_PMF(cloud[i], gcloud, ngcloud);</span><br><span class="line"></span><br><span class="line">    Csegmentation seg(resolution);</span><br><span class="line">    //Preprocessing: Segmentation and Fitting (Optional)</span><br><span class="line">    //RANSAC plane segmentation</span><br><span class="line">    /*pcXYZIPtr fitcloud(new pcXYZI());</span><br><span class="line">	  float td = 1;</span><br><span class="line">	  fitcloud = seg.planesegRansac(gcloud, td);</span><br><span class="line">	  io.writePcdFile(&quot;ransac ground cloud.pcd&quot;, fitcloud);</span><br><span class="line">	  //Projection</span><br><span class="line">	  pcXYZIPtr pgcloud(new pcXYZI());</span><br><span class="line">      pgcloud = seg.groundprojection(gcloud);</span><br><span class="line">	  io.writePcdFile(&quot;projected groundcloud.pcd&quot;, pgcloud);*/</span><br><span class="line"></span><br><span class="line">    //Step 4. 3D-&gt;2D projection, Generating Projection Image</span><br><span class="line">    Imageprocess ip;</span><br><span class="line">    ip.savepcgrid(bound_3d_temp, resolution, cloud, gcloud, ngcloud); //get image size and save point indices in each pixel</span><br><span class="line"></span><br><span class="line">    //For better efficiency (without ground segmentation), you can replace gcloud and ngcloud with cloud</span><br><span class="line">    //[0:Original Cloud, 1 : Ground Cloud, 2 : Non - ground Cloud]</span><br><span class="line">    // Image 1</span><br><span class="line">    ip.pc2imgI(gcloud, 1, imgI, io.paralist.intensity_scale);</span><br><span class="line">    // Image 2</span><br><span class="line">    ip.pc2imgZ(ngcloud, 2, imgZ);</span><br><span class="line">    // Image 3</span><br><span class="line">    if (datatype == 1)</span><br><span class="line">    &#123; // For MLS</span><br><span class="line">        float expectedmaxnum;</span><br><span class="line">        expectedmaxnum = io.paralist.density_threshold * density * resolution * resolution; // expectedmaxnum: expected max point number in a pixel</span><br><span class="line">        ip.pc2imgD(gcloud, 1, imgD, expectedmaxnum);</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; &quot;Point Cloud --&gt; Geo-referneced Image done\n&quot;;</span><br><span class="line"></span><br><span class="line">    //Step 5. Image Processing</span><br><span class="line">    //5.1.1 Median filter  (Optional)</span><br><span class="line">    // Image 4</span><br><span class="line">    if (datatype == 1)               // For MLS</span><br><span class="line">        medianBlur(imgI, imgImf, 3); // Remove the salt and pepper noise</span><br><span class="line">    else if (datatype == 2)</span><br><span class="line">        imgImf = imgI; // For ALS</span><br><span class="line"></span><br><span class="line">    //5.1.2 Sobel gradient calculation and boundary extraction</span><br><span class="line">    // Image 5</span><br><span class="line">    imgIgradient = ip.Sobelboundary(imgImf);</span><br><span class="line">    // Image 6</span><br><span class="line">    imgZgradient = ip.Sobelboundary(imgZ);</span><br><span class="line"></span><br><span class="line">    //5.2.1. Image Thresholding using Max Entropy Segmentation (All self-adaptive)</span><br><span class="line">    // Image 7</span><br><span class="line">    imgZbinary = ip.maxEntropySegMentation(imgZgradient);</span><br><span class="line">    //int maxroadslope = 50;  // Setting the threshold for Surface Roughness, 50/255 here</span><br><span class="line">    //threshold(imgZgradient, imgZbinary, maxroadslope, 1, THRESH_BINARY);</span><br><span class="line">    if (datatype == 1)</span><br><span class="line">    &#123;</span><br><span class="line">        // Image 8</span><br><span class="line">        imgDbinary = ip.maxEntropySegMentation(imgD); // for MLS</span><br><span class="line">        // Image 9</span><br><span class="line">        imgIgradientroad = ip.ExtractRoadPixelIZD(imgIgradient, imgZbinary, imgDbinary); //Use the slope and point density as the criterion</span><br><span class="line">    &#125;</span><br><span class="line">    else if (datatype == 2)</span><br><span class="line">        imgIgradientroad = ip.ExtractRoadPixelIZ(imgIgradient, imgZbinary); //for ALS</span><br><span class="line">    // Image 10</span><br><span class="line">    imgIbinary = ip.maxEntropySegMentation(imgIgradientroad);</span><br><span class="line">    //However, Max Entropy Method is not efficient enough</span><br><span class="line"></span><br><span class="line">    //5.3. Intensity Image Connected Component Analysis (CCA) and Labeling</span><br><span class="line">    float smallregion;</span><br><span class="line">    if (datatype == 1)</span><br><span class="line">        smallregion = 0.4 / (resolution * resolution); //Pixel Number Threshold: 0.6 m^2 as the threshold for small connected region. Manually tune parameter (0.5) here.</span><br><span class="line">    else if (datatype == 2)</span><br><span class="line">        smallregion = 0.5 / (resolution * resolution);</span><br><span class="line">    ip.RemoveSmallRegion(imgIbinary, imgIbfilter, smallregion); //CCA Filtering (Problem: It&#x27;s inefficient to run CCA twice. Improve the codes latter.)</span><br><span class="line"></span><br><span class="line">    // filling the hole</span><br><span class="line">    Timg = imgIbfilter;</span><br><span class="line">    // Timg = imgIbinary;</span><br><span class="line">    //ip.Truncate(imgIbfilter, Timg); //may encounter some problem (OpenCV Error: Assertion failed)</span><br><span class="line">    ip.ImgFilling(Timg, imgFilled); //Filling the holes inside the markings (Optional)</span><br><span class="line"></span><br><span class="line">    //5.3.2. Morphological Operations: Dilation and Closing (Optional)</span><br><span class="line">    /*Mat element = getStructuringElement(MORPH_CROSS, Size(3, 3));</span><br><span class="line">		morphologyEx(imgIbfilter, closeImg, MORPH_CLOSE, element);</span><br><span class="line">		//dilate(imgIbfilter, dilateImg, Mat(),element);</span><br><span class="line">		//erode(dilateImg, closeImg, Mat());  // -&gt;closeImg*/</span><br><span class="line"></span><br><span class="line">    // Image 11</span><br><span class="line">    //ip.CcaBySeedFill(Timg, labelImg);</span><br><span class="line">    ip.CcaBySeedFill(imgFilled, labelImg); //CCA: Seed filling method with 8 neighbor</span><br><span class="line">    //ip.CcaByTwoPass(imgFilled, labelImg);   //CCA: Two pass method with 4 neighbor (Alternative)</span><br><span class="line"></span><br><span class="line">    // Image 12</span><br><span class="line">    ip.LabelColor(labelImg, colorLabelImg); //CCA Labeling and Truncation</span><br><span class="line"></span><br><span class="line">    //5.4 Harris / Shi-Tomasi Corner Detection (Optional)</span><br><span class="line">    /*ip.DetectCornerHarris(imgIbfilter, colorLabelImg, corner, cornerwithimg,150);  //Using Harris Detector</span><br><span class="line">	  float minvertexdis = 2.0 / resolution;  //threshold 2 meter</span><br><span class="line">	  double mincornerscore = 0.05; //0.01 original</span><br><span class="line">	  ip.DetectCornerShiTomasi(imgFilled, colorLabelImg, cornerwithimg, minvertexdis, mincornerscore);  //Using Shi-Tomasi Detector*/</span><br><span class="line">    cout &lt;&lt; &quot;Roadmarking pixels extraction done.\n&quot;;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    //Step 6. 2D-&gt;3D back to point cloud</span><br><span class="line">    // 二维映射回三维</span><br><span class="line">    //ip.img2pc_g(colorLabelImg, gcloud, outcloud);                //Ground Road Marking Points (All in one)</span><br><span class="line">    ip.img2pclabel_g(labelImg, gcloud, outclouds, resolution / 5); //Ground Road Marking Points (Segmentation) //Elevation filter: the last parameter is set as the dZ threshold for single pixel</span><br><span class="line"></span><br><span class="line">    //Use Otsu (Intensity) Method and Statistics Outlier Remover to filter the point cloud</span><br><span class="line">    seg.cloudFilter(outclouds, outcloud_otsu_sor, 256, 10, 2.5); // Three parameters: the first is for the histogram level of Otsu Thresholding , the second is for SOR neighbor number and the third is for SOR std threshold</span><br><span class="line"></span><br><span class="line">    //Delete point clouds whose point number is less than a threshold</span><br><span class="line">    if (datatype == 1)</span><br><span class="line">        seg.NFilter(outcloud_otsu_sor, outcloud_otsu_sor_n, density / 15); //the last parameter is set as the point number threshold for each cloud</span><br><span class="line">    else</span><br><span class="line">        seg.NFilter(outcloud_otsu_sor, outcloud_otsu_sor_n, 10);</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; &quot;Roadmarking pixels --&gt; roadmarking point cloud done.\n&quot;;</span><br><span class="line"></span><br><span class="line">    //Step 7. Object Recognition and Classification based on Model Matching and Geometric Information</span><br><span class="line">    //7.1 Boundary and Corner Extraction (Optional)</span><br><span class="line">    // Boundary Extraction: Alpha-Shape Concave Hull Generation</span><br><span class="line">    seg.BoundaryExtraction(outcloud_otsu_sor_n, boundaryclouds, 2, 0.7);</span><br><span class="line">    // Corner Extraction: Neighborhood Processing</span><br><span class="line">    // seg.CornerExtraction(boundaryclouds,cornerclouds,1,8,0.1,0.02,0.95); // Parameters: 1/0 Use Radius Search or KNN, 8, KNN&#x27;s K, 0.15 search radius , 0.02 distance threshold, 0.94 maxcos</span><br><span class="line">    cout &lt;&lt; &quot;Find [&quot; &lt;&lt; boundaryclouds.size() &lt;&lt; &quot;] candidate roadmarkings\n&quot;;</span><br><span class="line"></span><br><span class="line">    //7.2 Road Markings Rough Classification based on Bounding Box Feature</span><br><span class="line">    seg.BoundingInformation(outcloud_otsu_sor_n, boundingdatas);</span><br><span class="line">    seg.BoundingFeatureCalculation(boundingdatas, boundingfeatures);</span><br><span class="line"></span><br><span class="line">    if (roadtype == 1)</span><br><span class="line">        seg.CategoryJudgementBox_highway(boundingfeatures, roadmarkings);</span><br><span class="line">    else if (roadtype == 2)</span><br><span class="line">        seg.CategoryJudgementBox_cityroad(boundingfeatures, roadmarkings);</span><br><span class="line">    cout &lt;&lt; &quot;Roadmarking rough classification done\n&quot;;</span><br><span class="line"></span><br><span class="line">    //7.3 Road Markings (Arrow) Classification based on Model Matching (Relatively Slow, You may try other faster 2D feature and matching strategy)</span><br><span class="line">    cout &lt;&lt; &quot;Begin model matching.\n&quot;;</span><br><span class="line">    ModelMatch mm = ModelMatch(10, io.paralist.model_matching_correct_match_fitness_thre, io.paralist.model_matching_heading_increment,</span><br><span class="line">                               io.paralist.model_matching_overlapping_dist_thre, io.paralist.model_matching_overlapping_ratio_thre);</span><br><span class="line">    mm.model_match(model_path, boundaryclouds, roadmarkings);</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; &quot;Irregular roadmarking classification by model matching done.\n&quot;;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; &quot;Roadmarking extraction done, [&quot; &lt;&lt; roadmarkings.size() &lt;&lt; &quot;] in total.\n&quot;;</span><br><span class="line"></span><br><span class="line">    //Step 8. Vectorization</span><br><span class="line">    // the parameters are set as the linear sample distance and ambiguous ratio for long side line vectorization</span><br><span class="line">    if (roadtype == 1)</span><br><span class="line">        seg.MarkingVectorization_highway(boundaryclouds, boundingdatas, roadmarkings, io.paralist.sideline_vector_distance, 0.2);</span><br><span class="line">    else if (roadtype == 2)</span><br><span class="line">        seg.MarkingVectorization_cityroad(boundaryclouds, boundingdatas, roadmarkings, io.paralist.sideline_vector_distance, 0.15);</span><br><span class="line"></span><br><span class="line">    seg.CombineSideLines(roadmarkings, io.paralist.sideline_vector_distance, sideline_roadmarkings); //Side lines Combination</span><br><span class="line">    seg.GetRoadmarkingsForVect(roadmarkings, sideline_roadmarkings, roadmarkings_vect);</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; &quot;Roadmarking vectorization done, [&quot; &lt;&lt; roadmarkings_vect.size() &lt;&lt; &quot;] in total\n&quot;;</span><br><span class="line"></span><br><span class="line">    std::chrono::steady_clock::time_point toc = std::chrono::steady_clock::now();</span><br><span class="line">    std::chrono::duration&lt;double&gt; time_used = std::chrono::duration_cast&lt;std::chrono::duration&lt;double&gt;&gt;(toc - tic);</span><br><span class="line"></span><br><span class="line">    /*------------------------------------------------Output----------------------------------------------------*/</span><br><span class="line">    //Step 9. Output Result</span><br><span class="line"></span><br><span class="line">    if (!boost::filesystem::exists(outputFolderPath))</span><br><span class="line">        boost::filesystem::create_directory(outputFolderPath);</span><br><span class="line"></span><br><span class="line">    string filename = inputFilePath.substr(inputFilePath.rfind(&#x27;\\&#x27;));</span><br><span class="line">    string output_sub_folder = outputFolderPath + filename + &quot;_out&quot;;</span><br><span class="line"></span><br><span class="line">    if (!boost::filesystem::exists(output_sub_folder))</span><br><span class="line">        boost::filesystem::create_directory(output_sub_folder);</span><br><span class="line"></span><br><span class="line">    // Output Images</span><br><span class="line">    ip.saveimg(output_sub_folder + &quot;/Geo-referenced_Image&quot;, 0, imgI, imgZ, imgD, imgImf, imgIgradient, imgZgradient, imgZbinary, imgDbinary, imgIgradientroad, imgIbinary, imgFilled, colorLabelImg); //Saving the Images</span><br><span class="line"></span><br><span class="line">    // Output pointcloud</span><br><span class="line">    // You can view the results in CloudCompare or AutoDesk Recap</span><br><span class="line">    // io.writePcdAll(outputFilePath+&quot;/Filtered_Labeled_Clouds&quot;, &quot;filtered_labeled.pcd&quot;, outcloud_otsu_sor_n);</span><br><span class="line">    // io.writePcdAll(output_sub_folder+&quot;/Boundary_Clouds&quot;, &quot;boundary.pcd&quot;, boundaryclouds);</span><br><span class="line">    io.writeLasAll(0, output_sub_folder + &quot;/Classified_Road_Markings&quot;, outcloud_otsu_sor_n, roadmarkings, X_origin, Y_origin);</span><br><span class="line"></span><br><span class="line">    //Output vectorization results</span><br><span class="line">    //You can view the results on https://beta.sharecad.org/ or in AutoCAD</span><br><span class="line">    io.writemarkVectDXF(0, output_sub_folder + &quot;/Vectorized_Road_Markings&quot;, roadmarkings, sideline_roadmarkings, X_origin, Y_origin); //*.dxf format</span><br><span class="line">    //io.writeRoadmarkingShpWithOffset(outputFilePath, roadmarkings_vect, i, X_origin, Y_origin); //*.shp format</span><br><span class="line"></span><br><span class="line">    //timing</span><br><span class="line">    std::cout &lt;&lt; &quot;Process file [&quot; &lt;&lt; inputFilePath &lt;&lt; &quot;] done in [&quot; &lt;&lt; time_used.count() &lt;&lt; &quot;] s.\n&quot;;</span><br><span class="line"></span><br><span class="line">    //Display Results</span><br><span class="line">    if (io.paralist.visualization_on)</span><br><span class="line">    &#123;</span><br><span class="line">        io.displayroad(ngcloud, gcloud);                                              //Display non-ground and ground cloud</span><br><span class="line">        io.displaymarkwithng(outcloud_otsu_sor_n, ngcloud);          //Display road markings point clouds with non-ground cloud</span><br><span class="line">        io.displaymarkbycategory(outcloud_otsu_sor_n, roadmarkings); //Display road markings point clouds rendered by category</span><br><span class="line">                                                                     //io.displaymarkVect(roadmarkings, sideline_roadmarkings);                        //Display vectorized road markings</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    // 创建PCD写入器对象</span><br><span class="line">    pcl::PCDWriter writer;</span><br><span class="line"></span><br><span class="line">    // 指定要保存的PCD文件名</span><br><span class="line">    std::string filename1 = &quot;ground_pc.pcd&quot;;</span><br><span class="line"></span><br><span class="line">    // 将点云保存为PCD文件</span><br><span class="line">    gcloud-&gt;width = 1;</span><br><span class="line">    gcloud-&gt;height = gcloud-&gt;size();</span><br><span class="line">    writer.write&lt;pcl::PointXYZI&gt;(filename1, *gcloud, false);</span><br><span class="line"></span><br><span class="line">    // 指定要保存的PCD文件名</span><br><span class="line">    std::string filename2 = &quot;nonground_pc.pcd&quot;;</span><br><span class="line"></span><br><span class="line">    // 将点云保存为PCD文件</span><br><span class="line">       // 将点云保存为PCD文件</span><br><span class="line">    ngcloud-&gt;width = 1;</span><br><span class="line">    ngcloud-&gt;height = ngcloud-&gt;size();</span><br><span class="line">    writer.write&lt;pcl::PointXYZI&gt;(filename2, *ngcloud, false);</span><br><span class="line"></span><br><span class="line">    return 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-      
     </div>
 
     
@@ -195,713 +197,22 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/07/hexo%E5%8D%9A%E5%AE%A2%E6%A0%BC%E5%BC%8F%E6%8E%A7%E5%88%B6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jun LEI">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-      <meta itemprop="description" content="Here is my Space">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hexo">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/10/07/hexo%E5%8D%9A%E5%AE%A2%E6%A0%BC%E5%BC%8F%E6%8E%A7%E5%88%B6/" class="post-title-link" itemprop="url">hexo博客格式控制</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2023-10-07 09:47:35 / Modified: 09:47:47" itemprop="dateCreated datePublished" datetime="2023-10-07T09:47:35+08:00">2023-10-07</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <hr>
-<h2 id="layout-drafttitle-hexo博客格式控制date-2023-09-24-19-14-18tags"><a href="#layout-drafttitle-hexo博客格式控制date-2023-09-24-19-14-18tags" class="headerlink" title="layout:  - drafttitle: hexo博客格式控制date: 2023-09-24 19:14:18tags:"></a>layout:<br>  - draft<br>title: hexo博客格式控制<br>date: 2023-09-24 19:14:18<br>tags:</h2><p>本文针对Next主题，不确保对于其它主题有效（但从修改模式来看，是有效的）</p>
-<p>Next默认是会显示全文的，这样显然很不方便，因此需要一些方法去只显示前面一部分。<br>修改配置</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/10/07/hexo%E5%8D%9A%E5%AE%A2%E6%A0%BC%E5%BC%8F%E6%8E%A7%E5%88%B6/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/10/07/hexo%E5%8D%9A%E5%AE%A2%E6%A0%BC%E5%BC%8F%E6%8E%A7%E5%88%B6/" rel="prev" title="hexo博客格式控制">
+                  <i class="fa fa-angle-left"></i> hexo博客格式控制
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
     </footer>
   </article>
 </div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/07/Kill-PID/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jun LEI">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-      <meta itemprop="description" content="Here is my Space">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hexo">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/10/07/Kill-PID/" class="post-title-link" itemprop="url">Kill_PID</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2023-10-07 09:38:41 / Modified: 09:45:35" itemprop="dateCreated datePublished" datetime="2023-10-07T09:38:41+08:00">2023-10-07</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>如何杀死特定的编号为TCP 1081的进程</p>
-<p>比如我们要查找1081端口的pid号，那么在终端中输入</p>
-<figure class="highlight plaintext"><figcaption><span>script level 4</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ano | findstr 1081</span><br></pre></td></tr></table></figure>
-<p>找到LISTENING那一行，即可看到8080端口号的pid号为28808</p>
-<p>上一步骤我们查询到8080端口号的pid号为28808，那么我们可以通过这个pid号杀死8080端口的进程，释放8080端口。</p>
-<p>终端中输入</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">taskkill /f /pid 6748</span><br></pre></td></tr></table></figure>
-<p>按下回车，即可杀死进程，释放端口。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/06/cpp%E5%BC%82%E5%B8%B8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jun LEI">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-      <meta itemprop="description" content="Here is my Space">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hexo">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/10/06/cpp%E5%BC%82%E5%B8%B8/" class="post-title-link" itemprop="url">cpp异常</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2023-10-06 09:37:30 / Modified: 09:38:14" itemprop="dateCreated datePublished" datetime="2023-10-06T09:37:30+08:00">2023-10-06</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>在编程过程中难免会用到一些过时，或者曾经不安全的函数，如上，这是编译器会出现warning提示用某某新函数，如果不想使用新的函数可以使用一下方法：</p>
-<ol>
-<li><p>使用VS提供的 编译器选择性提供warning功能 link: Developer tools, technical documentation and coding examples | Microsoft Docs-</p>
-<p>  us&#x2F;library&#x2F;2c8f766e.aspx 例：上面的错误使用 #pragma warning( disable : 4996) 即可消除。</p>
-</li>
-<li><p>使用提示中的_CRT_SECURE_NO_WARNINGS，以下是使用方法：</p>
-<pre><code> a. Project properties-&gt;Configuration Properties-&gt;C/C++-&gt;Preprocessor-&gt;Preprocessor
-
-     Definitions
-
- b. 点击按钮 (...)
-
- c. 输入：_CRT_SECURE_NO_WARNINGS。 注：使用 &quot;\n&quot; 相隔
-</code></pre>
-</li>
-<li><p>在自己代码文件的首行加入 #define _CRT_SECURE_NO_WARNINGS</p>
-<figure class="highlight plaintext"><figcaption><span>script level 4</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#define _CRT_SECURE_NO_WARNINGS</span><br><span class="line">#include &lt;stdio.h&gt;</span><br></pre></td></tr></table></figure></li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/06/conda/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jun LEI">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-      <meta itemprop="description" content="Here is my Space">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hexo">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/10/06/conda/" class="post-title-link" itemprop="url">conda</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2023-10-06 07:44:36 / Modified: 07:44:57" itemprop="dateCreated datePublished" datetime="2023-10-06T07:44:36+08:00">2023-10-06</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="conda常见命令"><a href="#conda常见命令" class="headerlink" title="conda常见命令"></a>conda常见命令</h1><p>conda create -n pointcloud python&#x3D;3.6</p>
-<p>pip  install  -i  <a target="_blank" rel="noopener" href="https://pypi.doubanio.com/simple/">https://pypi.doubanio.com/simple/</a>  –trusted-host pypi.doubanio.com  pip cesiumpy<br>conda config –add channels <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</a><br>conda config –add channels <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</a><br>conda create -n py33 python&#x3D;3.3</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/05/NerfStudio/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jun LEI">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-      <meta itemprop="description" content="Here is my Space">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hexo">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/10/05/NerfStudio/" class="post-title-link" itemprop="url">NerfStudio</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-10-05 17:48:40" itemprop="dateCreated datePublished" datetime="2023-10-05T17:48:40+08:00">2023-10-05</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-06 07:36:38" itemprop="dateModified" datetime="2023-10-06T07:36:38+08:00">2023-10-06</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>pip install torch&#x3D;&#x3D;2.0.1+cu117 torchvision&#x3D;&#x3D;0.15.2+cu117 –extra-index-url <a target="_blank" rel="noopener" href="https://download.pytorch.org/whl/cu117">https://download.pytorch.org/whl/cu117</a></p>
-<p>conda install -c “nvidia&#x2F;label&#x2F;cuda-11.7.1” cuda-toolkit<br>pip install ninja git+<a target="_blank" rel="noopener" href="https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch">https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch</a><br>pip install nerfstudio</p>
-<h1 id="Download-some-test-data"><a href="#Download-some-test-data" class="headerlink" title="Download some test data:"></a>Download some test data:</h1><p>ns-download-data nerfstudio –capture-name&#x3D;poster</p>
-<h1 id="Train-model"><a href="#Train-model" class="headerlink" title="Train model"></a>Train model</h1><p>ns-train nerfacto –data data&#x2F;nerfstudio&#x2F;poster</p>
-<p>ns-process-data images –data F:\NerfData\kitchen\images –output-dir F:\NerfData\kitchen\output</p>
-<p>C:\Users\ljtj\Desktop\COLMAP-3.8-windows-cuda\COLMAP.bat</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/05/%E8%8D%89%E7%A8%BF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jun LEI">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-      <meta itemprop="description" content="Here is my Space">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hexo">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/10/05/%E8%8D%89%E7%A8%BF/" class="post-title-link" itemprop="url">草稿</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-10-05 17:40:43" itemprop="dateCreated datePublished" datetime="2023-10-05T17:40:43+08:00">2023-10-05</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-10-06 07:37:19" itemprop="dateModified" datetime="2023-10-06T07:37:19+08:00">2023-10-06</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="清除电脑的缓存"><a href="#清除电脑的缓存" class="headerlink" title="清除电脑的缓存"></a>清除电脑的缓存</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">del /f /s /q %windir%\prefetch\*.*</span><br><span class="line">del /f /q %userprofile%\cookies\*.*</span><br><span class="line">del /f /q %userprofile%\recent\*.*</span><br><span class="line">del /f /s /q “%userprofile%\Local Settings\Temp\*.*”</span><br><span class="line">del /f /s /q “%userprofile%\recent\*.*”</span><br><span class="line"></span><br><span class="line">rd %temp% /s /q</span><br><span class="line">md %temp%</span><br></pre></td></tr></table></figure>
-
-<h1 id="点云环境配置文件"><a href="#点云环境配置文件" class="headerlink" title="点云环境配置文件"></a>点云环境配置文件</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/simonyucsdy/article/details/103361203">https://blog.csdn.net/simonyucsdy/article/details/103361203</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41938858/article/details/81588709">https://blog.csdn.net/qq_41938858/article/details/81588709</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/feierban/article/details/80283727">https://blog.csdn.net/feierban/article/details/80283727</a></p>
-<h1 id="多线程程序的写法"><a href="#多线程程序的写法" class="headerlink" title="多线程程序的写法"></a>多线程程序的写法</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;pcl/point_cloud.h&gt;</span><br><span class="line">#include &lt;pcl/point_types.h&gt;</span><br><span class="line">#include &lt;pcl/kdtree/kdtree_flann.h&gt;</span><br><span class="line">#include &lt;pcl/io/pcd_io.h&gt;</span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line">#include &lt;thread&gt;</span><br><span class="line"></span><br><span class="line">const int numThreads = 4; // 定义线程数量</span><br><span class="line"></span><br><span class="line">void computeResolutionThread(const pcl::PointCloud&lt;pcl::PointXYZ&gt;::ConstPtr&amp; cloud, int startIdx, int endIdx, double&amp; resolution)</span><br><span class="line">&#123;</span><br><span class="line">    int numberOfPoints = 0;</span><br><span class="line">    int nres;</span><br><span class="line">    std::vector&lt;int&gt; indices(2);</span><br><span class="line">    std::vector&lt;float&gt; squaredDistances(2);</span><br><span class="line">    pcl::search::KdTree&lt;pcl::PointXYZ&gt; tree;</span><br><span class="line">    tree.setInputCloud(cloud);</span><br><span class="line"></span><br><span class="line">    for (int i = startIdx; i &lt; endIdx; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        if (!pcl::isFinite(cloud-&gt;points[i]))</span><br><span class="line">            continue;</span><br><span class="line">        nres = tree.nearestKSearch(i, 2, indices, squaredDistances);</span><br><span class="line">        if (nres == 2)</span><br><span class="line">        &#123;</span><br><span class="line">            resolution += sqrt(squaredDistances[1]);</span><br><span class="line">            ++numberOfPoints;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">double computeResolution(const pcl::PointCloud&lt;pcl::PointXYZ&gt;::ConstPtr&amp; cloud)</span><br><span class="line">&#123;</span><br><span class="line">    double resolution = 0.0;</span><br><span class="line">    int numPoints = cloud-&gt;size();</span><br><span class="line">    std::vector&lt;std::thread&gt; threads;</span><br><span class="line"></span><br><span class="line">    for (int i = 0; i &lt; numThreads; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        int startIdx = i * (numPoints / numThreads);</span><br><span class="line">        int endIdx = (i == numThreads - 1) ? numPoints : (i + 1) * (numPoints / numThreads);</span><br><span class="line">        threads.emplace_back(computeResolutionThread, cloud, startIdx, endIdx, std::ref(resolution));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    for (auto&amp; thread : threads)</span><br><span class="line">    &#123;</span><br><span class="line">        thread.join();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    if (numPoints != 0)</span><br><span class="line">        resolution /= numPoints;</span><br><span class="line"></span><br><span class="line">    return resolution;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    pcl::PointCloud&lt;pcl::PointXYZ&gt;::Ptr cloud(new pcl::PointCloud&lt;pcl::PointXYZ&gt;);</span><br><span class="line">    // 加载点云数据到cloud中</span><br><span class="line"></span><br><span class="line">    double resolution = computeResolution(cloud);</span><br><span class="line">    std::cout &lt;&lt; &quot;Resolution: &quot; &lt;&lt; resolution &lt;&lt; std::endl;</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="BIMAngle-毕安格"><a href="#BIMAngle-毕安格" class="headerlink" title="BIMAngle 毕安格"></a>BIMAngle 毕安格</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># Run follow scripts within Package Manager Console, to ensure the &quot;BimAngle Engine SDK&quot; available.</span><br><span class="line"># Please ignore error messages in the execution of the script, as it is designed to do</span><br><span class="line"></span><br><span class="line"># Uninstall-Package  -Id Bimangle.ForgeEngine.Extension.Cesium3DTiles</span><br><span class="line"># Uninstall-Package  -Id Bimangle.ForgeEngine.Extension.Gltf</span><br><span class="line"></span><br><span class="line">NuGet\Update-Package -Id Bimangle.ForgeEngine.Common -Project Bimangle.ForgeEngine.Georeferncing</span><br><span class="line"></span><br><span class="line">NuGet\Update-Package -Id Bimangle.ForgeEngine.Revit2014 -Project Bimangle.ForgeEngine.Revit_R2014</span><br><span class="line">NuGet\Update-Package -Id Bimangle.ForgeEngine.Revit2015 -Project Bimangle.ForgeEngine.Revit_R2015</span><br><span class="line">NuGet\Update-Package -Id Bimangle.ForgeEngine.Revit2016 -Project Bimangle.ForgeEngine.Revit_R2016</span><br><span class="line">NuGet\Update-Package -Id Bimangle.ForgeEngine.Revit2017 -Project Bimangle.ForgeEngine.Revit_R2017</span><br><span class="line">NuGet\Update-Package -Id Bimangle.ForgeEngine.Revit2018 -Project Bimangle.ForgeEngine.Revit_R2018</span><br><span class="line">NuGet\Update-Package -Id Bimangle.ForgeEngine.Revit2019 -Project Bimangle.ForgeEngine.Revit_R2019</span><br><span class="line">NuGet\Update-Package -Id Bimangle.ForgeEngine.Revit2020 -Project Bimangle.ForgeEngine.Revit_R2020</span><br><span class="line">NuGet\Update-Package -Id Bimangle.ForgeEngine.Revit2021 -Project Bimangle.ForgeEngine.Revit_R2021</span><br><span class="line">NuGet\Update-Package -Id Bimangle.ForgeEngine.Revit2022 -Project Bimangle.ForgeEngine.Revit_R2022</span><br><span class="line">NuGet\Update-Package -Id Bimangle.ForgeEngine.Revit2023 -Project Bimangle.ForgeEngine.Revit_R2023</span><br><span class="line">NuGet\Update-Package -Id Bimangle.ForgeEngine.Revit2024 -Project Bimangle.ForgeEngine.Revit_R2024</span><br><span class="line">NuGet\Update-Package -Id Bimangle.ForgeEngine.Navisworks2014 -Project Bimangle.ForgeEngine.Nw_R2014</span><br><span class="line">NuGet\Update-Package -Id Bimangle.ForgeEngine.Navisworks2015 -Project Bimangle.ForgeEngine.Nw_R2015</span><br><span class="line">NuGet\Update-Package -Id Bimangle.ForgeEngine.Navisworks2016 -Project Bimangle.ForgeEngine.Nw_R2016</span><br><span class="line">NuGet\Update-Package -Id Bimangle.ForgeEngine.Navisworks2017 -Project Bimangle.ForgeEngine.Nw_R2017</span><br><span class="line">NuGet\Update-Package -Id Bimangle.ForgeEngine.Navisworks2018 -Project Bimangle.ForgeEngine.Nw_R2018</span><br><span class="line">NuGet\Update-Package -Id Bimangle.ForgeEngine.Navisworks2019 -Project Bimangle.ForgeEngine.Nw_R2019</span><br><span class="line">NuGet\Update-Package -Id Bimangle.ForgeEngine.Navisworks2020 -Project Bimangle.ForgeEngine.Nw_R2020</span><br><span class="line">NuGet\Update-Package -Id Bimangle.ForgeEngine.Navisworks2021 -Project Bimangle.ForgeEngine.Nw_R2021</span><br><span class="line">NuGet\Update-Package -Id Bimangle.ForgeEngine.Navisworks2022 -Project Bimangle.ForgeEngine.Nw_R2022</span><br><span class="line">NuGet\Update-Package -Id Bimangle.ForgeEngine.Navisworks2023 -Project Bimangle.ForgeEngine.Nw_R2023</span><br><span class="line">NuGet\Update-Package -Id Bimangle.ForgeEngine.Navisworks2024 -Project Bimangle.ForgeEngine.Nw_R2024</span><br><span class="line"></span><br><span class="line">NuGet\Update-Package -Id Bimangle.ForgeEngine.Dgn -Project Bimangle.ForgeEngine.Dgn</span><br><span class="line">NuGet\Update-Package -Id Bimangle.ForgeEngine.Skp -Project Bimangle.ForgeEngine.Skp</span><br><span class="line">NuGet\Update-Package -Id Bimangle.ForgeEngine.3DXML -Project Bimangle.ForgeEngine.3DXML</span><br><span class="line">NuGet\Update-Package -reinstall</span><br><span class="line"></span><br><span class="line"># You can rebuild now!</span><br></pre></td></tr></table></figure>
-
-<h1 id="UnrealEngine"><a href="#UnrealEngine" class="headerlink" title="UnrealEngine"></a>UnrealEngine</h1><p>懂得UE蓝图的基本使用<br>C++\C#<br>蓝图<br>可视化编程的工具  dynamo 节点拖拽 功能的快速开发</p>
-<ul>
-<li><p>基础的蓝图开发能力  功能实现<br>学会去用UMG 用户自定义界面  搭建原型 界面 高&#x2F;低保真</p>
-</li>
-<li><p>偏前端：按钮 输入框 搭建 交互</p>
-</li>
-<li><p>UE的美工</p>
-</li>
-</ul>
-<h1 id="Stable-Diffusion的用法"><a href="#Stable-Diffusion的用法" class="headerlink" title="Stable Diffusion的用法"></a>Stable Diffusion的用法</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install -r <span class="string">&quot;D:\AI\stable-diffusion-webui-master\requirements_versions.txt&quot;</span> --prefer-binary</span><br><span class="line">python -m pip install GitPython==<span class="number">3.1</span><span class="number">.30</span>  -i  https://pypi.doubanio.com/simple/  --trusted-host pypi.doubanio.com</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><figcaption><span>script level 4</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">你现在是一Prompt生成的AI·我将在之后框中输入Concept，然后你会将Concept转换为可供图像生成AI使用的Prompt和Negative Prompt。使用括号()可以增加关键词的权重为1.1倍，而使用方括[]减少权重为0.91倍。以下是范例</span><br><span class="line"></span><br><span class="line">Concept:挪威的女人</span><br><span class="line">Prompt: professional portrait photograph of a gorgeous Norwegian girlin Winter clothing with long wavy blonde hair, ( (sultry firty look) ),freckles, beautiful symmetrical face, cute natural makeup,( (standing outside in snowy city street) ), stunning modern urbanupscale environment, ultra realistic, Concept art, elegant, highlydetailed, intricate, sharp focus, depth of feld, f/1.8，85mm, mediumshot, mid shot, (centered image composition)， (professionally colorgraded), ( (bright soft diffused light) ),volumetric fog, trending oninstagram, trending on tumblr, hdr 4k，8k</span><br><span class="line"></span><br><span class="line">Negative Prompt: (bonnet), (hat), (beanie), cap, ( ( (wide shot) ))，(cropped head)， bad framing, out of frame, deformed, cripple, old,fat,ugly, poor, missing arm, additional arms, additional legs,additional head, additional face, multiple people, group of people,dyed hair, black and white, grayscale</span><br><span class="line"></span><br><span class="line">如果你了解了，请等待我输入Concept</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/05/C-%E7%A8%8B%E5%BA%8F%E8%B7%AF%E5%BE%84%E7%AE%A1%E7%90%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jun LEI">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-      <meta itemprop="description" content="Here is my Space">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hexo">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/10/05/C-%E7%A8%8B%E5%BA%8F%E8%B7%AF%E5%BE%84%E7%AE%A1%E7%90%86/" class="post-title-link" itemprop="url">C++程序路径管理</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2023-10-05 15:28:33 / Modified: 15:28:53" itemprop="dateCreated datePublished" datetime="2023-10-05T15:28:33+08:00">2023-10-05</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="C-程序的路径管理"><a href="#C-程序的路径管理" class="headerlink" title="C++程序的路径管理"></a>C++程序的路径管理</h1>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/09/25/%E7%82%B9%E4%BA%91%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jun LEI">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-      <meta itemprop="description" content="Here is my Space">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hexo">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/09/25/%E7%82%B9%E4%BA%91%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95/" class="post-title-link" itemprop="url">点云滤波算法</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2023-09-25 18:33:25 / Modified: 18:34:45" itemprop="dateCreated datePublished" datetime="2023-09-25T18:33:25+08:00">2023-09-25</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="CSF滤波"><a href="#CSF滤波" class="headerlink" title="CSF滤波"></a>CSF滤波</h1><p>CSF 滤波：<a target="_blank" rel="noopener" href="https://github.com/jianboqi/CSF">https://github.com/jianboqi/CSF</a><br>Cloth Simulation Filter<br><a target="_blank" rel="noopener" href="http://www.mdpi.com/2072-4292/8/6/501/htm">http://www.mdpi.com/2072-4292/8/6/501/htm</a><br>W. Zhang, J. Qi*, P. Wan, H. Wang, D. Xie, X. Wang, and G. Yan, “An Easy-to-Use Airborne LiDAR Data Filtering Method Based on Cloth Simulation,” Remote Sens., vol. 8, no. 6, p. 501, 2016</p>
-<h1 id=""><a href="#" class="headerlink" title=""></a></h1><p>Identifying ground returns using ProgressiveMorphologicalFilter segmentation</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/09/25/PointCloudtest/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jun LEI">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-      <meta itemprop="description" content="Here is my Space">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hexo">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/09/25/PointCloudtest/" class="post-title-link" itemprop="url">PointCloudtest</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2023-09-25 15:41:53 / Modified: 15:55:56" itemprop="dateCreated datePublished" datetime="2023-09-25T15:41:53+08:00">2023-09-25</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>BoundaryEstimate.exe F:\0Program\CPP\BoundaryExtraction\BoundaryEstimate\test_highwaytunnel_subsampled.pcd 0.5 0.5</p>
-<p>降采样后68万个点</p>
-<p>单线程跑出来的结果：<br>0.0600622<br>cloud_src: 679292<br>cloud_filtered: 672411</p>
-<p>多线程并行跑出来的结果：</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
 
 
 
