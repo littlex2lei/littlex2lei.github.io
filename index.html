@@ -114,7 +114,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -132,6 +132,80 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/08/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%B7%A5%E5%85%B7bypy%E5%B8%AE%E5%8A%A9%E6%96%87%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jun LEI">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="Here is my Space">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/10/08/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%B7%A5%E5%85%B7bypy%E5%B8%AE%E5%8A%A9%E6%96%87%E4%BB%B6/" class="post-title-link" itemprop="url">百度网盘工具bypy帮助文件</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-10-08 11:48:07 / Modified: 11:48:28" itemprop="dateCreated datePublished" datetime="2023-10-08T11:48:07+08:00">2023-10-08</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><W> !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br><W> You are running Python on Windows, which doesn’t support Unicode so well.<br>Files with non-ASCII names may not be handled correctly.<br><W> !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br><W> !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br><W> WARNING: System locale is not ‘UTF-8’.<br>Files with non-ASCII names may not be handled correctly.<br>You should set your System Locale to ‘UTF-8’.<br>Current locale is ‘cp936’<br><W> !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br>usage: bypy [-h] [-V] [-d] [-v] [-r RETRY] [-q] [-t TIMEOUT] [-s SLICE]<br>            [–chunk CHUNK] [-e] [-f] [–no-resume-download]<br>            [–include-regex INCREGEX] [–on-dup ONDUP] [–no-symlink]<br>            [–disable-ssl-check] [–cacerts CACERTS] [–mirror MIRROR]<br>            [–select-fastest-mirror] [–rapid-upload-only]<br>            [–resume-download-revert-back RCOUNT] [–move]<br>            [–processes PROCESSES] [–downloader DOWNLOADER]<br>            [–downloader-arguments DOWNLOADER_ARGS] [–config-dir CONFIGDIR]<br>            [-c]<br>            [command [command …]]</p>
+<p>bypy v1.8.2 - Python client for Baidu Yun (Personal Cloud Storage) 百度云&#x2F;百度网盘 Python 客户端</p>
+<p>positional arguments:<br>  command               operations (quota, list, etc)</p>
+<p>optional arguments:<br>  -h, –help            show this help message and exit<br>  -V, –version         show program’s version number and exit<br>  -d, –debug           set debugging level (-dd to increase debugging level,<br>                        -ddd to enable HTPP traffic debugging as well (very<br>                        talkative)) [default: 0]<br>  -v, –verbose         set verbosity level [default: 0]<br>  -r RETRY, –retry RETRY<br>                        number of retry attempts on network error [default: 5<br>                        times]<br>  -q, –quit-when-fail  quit when maximum number of retry failed [default:<br>                        False]<br>  -t TIMEOUT, –timeout TIMEOUT<br>                        network timeout in seconds [default: 300]<br>  -s SLICE, –slice SLICE<br>                        size of file upload slice (can use ‘1024’, ‘2k’,<br>                        ‘3MB’, etc) [default: 20 MB]<br>  –chunk CHUNK         size of file download chunk (can use ‘1024’, ‘2k’,<br>                        ‘3MB’, etc) [default: 20 MB]<br>  -e, –verify          verify upload &#x2F; download [default : False]<br>  -f, –force-hash      force file MD5 &#x2F; CRC32 calculation instead of using<br>                        cached value<br>  –no-resume-download  resume instead of restarting when downloading if local<br>                        file already exists [default: True]<br>  –include-regex INCREGEX<br>                        regular expression of files to include. if not<br>                        specified (default), everything is included. for<br>                        download, the regex applies to the remote files; for<br>                        upload, the regex applies to the local files. to<br>                        exclude files, think about your regex, some tips here:<br>                        <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/406230/regular-">https://stackoverflow.com/questions/406230/regular-</a><br>                        expression-to-match-string-not-containing-a-word<br>                        [default: ]<br>  –on-dup ONDUP        what to do when the same file &#x2F; folder exists in the<br>                        destination: ‘overwrite’, ‘skip’, ‘prompt’ [default:<br>                        overwrite]<br>  –no-symlink          DON’T follow symbol links when uploading &#x2F; syncing up<br>  –disable-ssl-check   DON’T verify host SSL cerificate<br>  –cacerts CACERTS     Specify the path for CA Bundle [default: None]<br>  –mirror MIRROR       Specify the PCS mirror (e.g. bj.baidupcs.com. Open ‘ht<br>                        tps:&#x2F;&#x2F;pcs.baidu.com&#x2F;rest&#x2F;2.0&#x2F;pcs&#x2F;manage?method&#x3D;listhos<br>                        t’ to get the list) to use. [default: pcs.baidu.com]<br>  –select-fastest-mirror<br>                        Let the program run some tests and select the fastest<br>                        PCS mirror it detectes. [default: False]<br>  –rapid-upload-only   only upload large files that can be rapidly uploaded<br>  –resume-download-revert-back RCOUNT<br>                        Revert back at least RCOUNT download chunk(s) and<br>                        align to chunk boundary when resuming the download. A<br>                        negative value means NO reverts. [default: 1]<br>  –move                Delete source files&#x2F;directories after<br>                        download&#x2F;upload&#x2F;syncdown&#x2F;syncup is successful (This<br>                        will force verification of the files). [default:<br>                        False]<br>  –processes PROCESSES<br>                        Number of parallel processes. (Only applies to dir<br>                        sync&#x2F;dl&#x2F;ul). [default: 1]<br>  –downloader DOWNLOADER<br>                        downloader to use (use python if not specified). valid<br>                        values: [‘aria2’] [default: ]<br>  –downloader-arguments DOWNLOADER_ARGS<br>                        arguments for the downloader: normally, the string is<br>                        the arguments to be passed to the downloader. however,<br>                        when it begins with ‘@’, it will be treated as the<br>                        name of file, whose contents will be used as the<br>                        downloader arguments (example: when specifying<br>                        ‘@args.txt’, file contents of ‘args.txt’ will be used<br>                        as the downloader arguments, not the string<br>                        ‘@args.txt’ itself). you can also use environment<br>                        variable ‘DOWNLOADER_ARGUMENTS’ to specify the<br>                        downloader arguments (the environment variable has<br>                        lower priority compared to this argument). default<br>                        values: {‘aria2’: ‘-c -k10M -x4 -s4 –file-<br>                        allocation&#x3D;none’}<br>  –config-dir CONFIGDIR<br>                        specify the config path [default: C:\Users\ljtj.bypy]<br>  -c, –clean           remove the token file (need re-auth) and upload<br>                        progress file, -cc: clean hash cache file as well</p>
+<p>Commands:<br>refreshtoken - refresh the access token<br>cdl_add <source_url> [save_path] [timeout] - add an offline (cloud) download task<br>cdl_addmon <source_url> [save_path] [timeout] - add an offline (cloud) download task and monitor the download progress<br>cdl_cancel <task_id>  - cancel an offline (cloud) download task<br>cdl_list - list offline (cloud) download tasks<br>cdl_query <task_ids>  - query existing offline (cloud) download tasks<br>cleancache - remove invalid entries from hash cache file<br>combine <remotefile> [localfile] [md5s] - try to create a file at PCS by combining slices, having MD5s specified<br>compare [remotedir] [localdir] - compare the remote directory with the local directory<br>copy&#x2F;cp <from> <to> - copy a file &#x2F; dir remotely at Baidu Yun<br>delete&#x2F;remove&#x2F;rm <remotepath> - delete a file &#x2F; dir remotely at Baidu Yun<br>downdir [remotedir] [localdir] - download a remote directory (recursively)<br>downfile <remotefile> [localpath] - download a remote file.<br>download [remotepath] [localpath] - download a remote directory (recursively) &#x2F; file<br>dumpcache - display file hash cache<br>list&#x2F;ls [remotepath] [format] [sort] [order] - list the ‘remotepath’ directory at Baidu PCS<br>listrecycle [start] [limit] - list the recycle contents<br>meta <remotepath> [format] - get information of the given path (dir &#x2F; file) at Baidu Yun.<br>mkdir <remotedir> - create a directory at Baidu Yun<br>move&#x2F;mv&#x2F;rename&#x2F;ren <from> <to> - move a file &#x2F; dir remotely at Baidu Yun<br>quota&#x2F;info - display the quota information<br>restore <remotepath> - restore a file from the recycle bin<br>search <keyword> [remotepath] [recursive] - search for a file using keyword at Baidu Yun<br>stream <remotefile> <localpipe> [format] [chunk] - stream a video &#x2F; audio file converted to M3U format at cloud side, to a pipe.<br>syncdown [remotedir] [localdir] [deletelocal] - sync down from the remote directory to the local directory<br>syncup [localdir] [remotedir] [deleteremote] - sync up from the local directory to the remote directory<br>upload [localpath] [remotepath] [ondup] - upload a file or directory (recursively)<br>whoami - display the user information</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -169,9 +243,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2023-10-08 09:35:09 / Modified: 09:51:41" itemprop="dateCreated datePublished" datetime="2023-10-08T09:35:09+08:00">2023-10-08</time>
+      <time title="Created: 2023-10-08 09:35:09" itemprop="dateCreated datePublished" datetime="2023-10-08T09:35:09+08:00">2023-10-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-10-09 20:43:07" itemprop="dateModified" datetime="2023-10-09T20:43:07+08:00">2023-10-09</time>
     </span>
 
   
@@ -184,28 +264,32 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="点云地面分割"><a href="#点云地面分割" class="headerlink" title="点云地面分割"></a>点云地面分割</h1><p>以下为点云分割源码</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">ifndef</span> EXTRACTGROUND_H</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> EXTRACTGROUND_H</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pcl/point_types.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pcl/point_cloud.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pcl/features/normal_3d.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pcl/filters/project_inliers.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pcl/ModelCoefficients.h&gt;</span></span></span><br><span class="line"><span class="comment">//#include &lt;pcl/visualization/pcl_visualizer.h&gt;</span></span><br><span class="line"><span class="comment">//#include &lt;pcl/visualization/cloud_viewer.h&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;utility.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//Reference: Two-step adaptive extraction method for ground points and breaklines from lidar point clouds, Bisheng Yang, Ronggang Huang, et al. ISPRS Journal of Photogrammetry and Remote Sensing</span></span><br><span class="line"><span class="keyword">namespace</span> roadmarking</span><br><span class="line">&#123;  </span><br><span class="line">	<span class="keyword">class</span> <span class="title class_">Ground_Extraction</span></span><br><span class="line">	&#123;</span><br><span class="line">	<span class="keyword">public</span>:</span><br><span class="line">		<span class="built_in">Ground_Extraction</span>();</span><br><span class="line">		<span class="function"><span class="type">void</span> <span class="title">Extract_ground_pts</span><span class="params">(pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr cloud,</span></span></span><br><span class="line"><span class="params"><span class="function">			pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr ground_cloud,</span></span></span><br><span class="line"><span class="params"><span class="function">			pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr no_ground_cloud,</span></span></span><br><span class="line"><span class="params"><span class="function">			Bounds bounds, CenterPoint center_pt)</span></span>;<span class="comment">//提取地面点函数		</span></span><br><span class="line">	<span class="keyword">protected</span>:</span><br><span class="line">	<span class="keyword">private</span>:</span><br><span class="line">		<span class="function"><span class="type">void</span> <span class="title">Get_grid</span><span class="params">(pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr cloud,</span></span></span><br><span class="line"><span class="params"><span class="function">			<span class="type">double</span> max_x, <span class="type">double</span> max_y, <span class="type">double</span> min_x, <span class="type">double</span> min_y,</span></span></span><br><span class="line"><span class="params"><span class="function">			<span class="type">int</span> row, <span class="type">int</span> list, <span class="type">int</span> num_voxel, Voxel* grid, pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr no_ground_cloud)</span></span>;</span><br><span class="line">			</span><br><span class="line">		<span class="function"><span class="type">void</span> <span class="title">Seg_ground_nground_pts</span><span class="params">(pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr cloud,</span></span></span><br><span class="line"><span class="params"><span class="function">			pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr ground_cloud,</span></span></span><br><span class="line"><span class="params"><span class="function">			pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr no_ground_cloud,</span></span></span><br><span class="line"><span class="params"><span class="function">			Voxel* grid, <span class="type">int</span> num_voxel)</span></span>;</span><br><span class="line">		<span class="type">float</span> grid_res_;</span><br><span class="line">		<span class="type">int</span>   min_pt_num_grid_;</span><br><span class="line">		<span class="type">float</span> max_height_diff_;</span><br><span class="line">		<span class="type">float</span> max_nei_height_diff_; </span><br><span class="line">	&#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br></pre></td></tr></table></figure>
-<h2 id="代码解释"><a href="#代码解释" class="headerlink" title="代码解释"></a>代码解释</h2><h3 id="Extract-ground-pts"><a href="#Extract-ground-pts" class="headerlink" title="Extract_ground_pts"></a>Extract_ground_pts</h3><h4 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h4><ul>
+          <h1 id="点云地面分割"><a href="#点云地面分割" class="headerlink" title="点云地面分割"></a>点云地面分割</h1><h2 id="主要包含的程序"><a href="#主要包含的程序" class="headerlink" title="主要包含的程序"></a>主要包含的程序</h2><p>Extract_ground_pts()会调用Get_grid()与Seg_ground_nground_pts()<br>Get_grid()<br>Seg_ground_nground_pts()</p>
+<h2 id="代码解释"><a href="#代码解释" class="headerlink" title="代码解释"></a>代码解释</h2><h3 id="Extract-ground-pts"><a href="#Extract-ground-pts" class="headerlink" title="Extract_ground_pts"></a>Extract_ground_pts</h3><h4 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">Ground_Extraction::Extract_ground_pts</span><span class="params">(pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr cloud,</span></span></span><br><span class="line"><span class="params"><span class="function">	                                       pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr ground_cloud,</span></span></span><br><span class="line"><span class="params"><span class="function">	                                       pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr no_ground_cloud,</span></span></span><br><span class="line"><span class="params"><span class="function">	                                       Bounds bounds, CenterPoint center_pt)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> row, list, num_voxel; </span><br><span class="line">	row = <span class="built_in">ceil</span>((bounds.max_y - bounds.min_y) / grid_res_);</span><br><span class="line">	list = <span class="built_in">ceil</span>((bounds.max_x - bounds.min_x) / grid_res_);</span><br><span class="line">	num_voxel = row*list;</span><br><span class="line"></span><br><span class="line">	Voxel* grid = <span class="keyword">new</span> Voxel[num_voxel];</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; num_voxel; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		grid[i].min_z = FLT_MAX;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">Get_grid</span>(cloud, bounds.max_x, bounds.max_y, bounds.min_x, bounds.min_y, row, list, num_voxel, grid, no_ground_cloud);</span><br><span class="line">	<span class="built_in">Seg_ground_nground_pts</span>(cloud, ground_clo`ud, no_ground_cloud, grid, num_voxel);</span><br><span class="line">	<span class="keyword">delete</span>[]grid;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h4><ul>
+<li>Bounds bounds</li>
 <li>pcl::PointCloud<a href="pcl::PointXYZI">pcl::PointXYZI</a>::Ptr cloud</li>
 <li>pcl::PointCloud<a href="pcl::PointXYZI">pcl::PointXYZI</a>::Ptr ground_cloud</li>
 <li>pcl::PointCloud<a href="pcl::PointXYZI">pcl::PointXYZI</a>::Ptr no_ground_cloud</li>
-<li>Bounds bounds</li>
 <li>CenterPoint center_pt</li>
 </ul>
-<h3 id="Get-grid"><a href="#Get-grid" class="headerlink" title="Get_grid"></a>Get_grid</h3><h4 id="参数说明-1"><a href="#参数说明-1" class="headerlink" title="参数说明"></a>参数说明</h4><ul>
+<h3 id="Get-grid"><a href="#Get-grid" class="headerlink" title="Get_grid"></a>Get_grid</h3><h4 id="源码-1"><a href="#源码-1" class="headerlink" title="源码"></a>源码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span>  <span class="title">Ground_Extraction::Get_grid</span><span class="params">(pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr cloud,</span></span></span><br><span class="line"><span class="params"><span class="function">	<span class="type">double</span> max_x, <span class="type">double</span> max_y, <span class="type">double</span> min_x, <span class="type">double</span> min_y,</span></span></span><br><span class="line"><span class="params"><span class="function">	<span class="type">int</span> row, <span class="type">int</span> list, <span class="type">int</span> num_voxel, Voxel* grid, pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr no_ground_cloud)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> temp_num_voxel;</span><br><span class="line">	<span class="type">int</span> ExpandGrid_List, ExpandGrid_Row;</span><br><span class="line">	ExpandGrid_List = list + <span class="number">2</span>;</span><br><span class="line">	ExpandGrid_Row = row + <span class="number">2</span>;</span><br><span class="line">	temp_num_voxel = ExpandGrid_Row*ExpandGrid_List;</span><br><span class="line">	Voxel *temp_grid = <span class="keyword">new</span> Voxel[temp_num_voxel];</span><br><span class="line"></span><br><span class="line">	<span class="type">float</span> non_ground_z_min = FLT_MAX;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; cloud-&gt;points.<span class="built_in">size</span>(); i++) <span class="comment">//判断每一个点</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (cloud-&gt;points[i].z &gt; non_ground_z_min)</span><br><span class="line">		&#123;</span><br><span class="line">			no_ground_cloud-&gt;points.<span class="built_in">push_back</span>(cloud-&gt;points[i]);</span><br><span class="line">			<span class="keyword">continue</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="type">int</span> temp_row, temp_list, temp_num;</span><br><span class="line">		temp_list = <span class="built_in">floor</span>((cloud-&gt;points[i].x - min_x) / grid_res_);</span><br><span class="line">		temp_row = <span class="built_in">floor</span>((cloud-&gt;points[i].y - min_y) / grid_res_);</span><br><span class="line">		temp_num = temp_row*list + temp_list;</span><br><span class="line">		<span class="keyword">if</span> (temp_num &gt;= <span class="number">0</span> &amp;&amp; temp_num &lt; num_voxel)</span><br><span class="line">		&#123;</span><br><span class="line">			grid[temp_num].point_id.<span class="built_in">push_back</span>(i);</span><br><span class="line">			grid[temp_num].PointsNumber++;</span><br><span class="line">			<span class="keyword">if</span> (cloud-&gt;points[i].z &lt; grid[temp_num].min_z)</span><br><span class="line">			&#123;</span><br><span class="line">				grid[temp_num].min_z = cloud-&gt;points[i].z;</span><br><span class="line">				grid[temp_num].NeighborMin_z = cloud-&gt;points[i].z;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">delete</span>[] temp_grid;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="参数说明-1"><a href="#参数说明-1" class="headerlink" title="参数说明"></a>参数说明</h4><ul>
 <li>pcl::PointCloud<a href="pcl::PointXYZI">pcl::PointXYZI</a>::Ptr cloud</li>
-<li>double max_x</li>
-<li>double max_y</li>
-<li>double min_x</li>
-<li>double min_y</li>
-<li>int row</li>
-<li>int list</li>
-<li>int num_voxel</li>
-<li>Voxel* grid</li>
-<li>pcl::PointCloud<a href="pcl::PointXYZI">pcl::PointXYZI</a>::Ptr no_ground_cloud</li>
+<li>double max_x：点云在x方向上的边界上限</li>
+<li>double max_y：点云在y方向上的边界上限</li>
+<li>double min_x：点云在x方向上的边界下限</li>
+<li>double min_y：点云在y方向上的边界下限</li>
+<li>int row：将点云划分为多少行</li>
+<li>int list：将点云划分为多少列</li>
+<li>int num_voxel：体素的个数</li>
+<li>Voxel* grid：体素的容器</li>
+<li>pcl::PointCloud<a href="pcl::PointXYZI">pcl::PointXYZI</a>::Ptr no_ground_cloud：非地面点的指针</li>
 </ul>
-<h3 id="Seg-ground-nground-pts"><a href="#Seg-ground-nground-pts" class="headerlink" title="Seg_ground_nground_pts"></a>Seg_ground_nground_pts</h3><h4 id="参数说明-2"><a href="#参数说明-2" class="headerlink" title="参数说明"></a>参数说明</h4><ul>
+<h3 id="Seg-ground-nground-pts"><a href="#Seg-ground-nground-pts" class="headerlink" title="Seg_ground_nground_pts"></a>Seg_ground_nground_pts</h3><h4 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h4><p>根据高差来判断 从而提取地面点云</p>
+<h4 id="源码-2"><a href="#源码-2" class="headerlink" title="源码"></a>源码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">Ground_Extraction::Seg_ground_nground_pts</span><span class="params">(pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr cloud,</span></span></span><br><span class="line"><span class="params"><span class="function">	pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr ground_cloud,</span></span></span><br><span class="line"><span class="params"><span class="function">	pcl::PointCloud&lt;pcl::PointXYZI&gt;::Ptr no_ground_cloud,</span></span></span><br><span class="line"><span class="params"><span class="function">	Voxel* grid, <span class="type">int</span> num_voxel)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> n = <span class="number">0</span>, m = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; num_voxel; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; grid[i].point_id.<span class="built_in">size</span>(); j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (cloud-&gt;points[grid[i].point_id[j]].z - grid[i].min_z &lt; max_height_diff_</span><br><span class="line">				&amp;&amp;grid[i].min_z - grid[i].NeighborMin_z &lt; max_nei_height_diff_)</span><br><span class="line">				ground_cloud-&gt;points.<span class="built_in">push_back</span>(cloud-&gt;points[grid[i].point_id[j]]);</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				no_ground_cloud-&gt;points.<span class="built_in">push_back</span>(cloud-&gt;points[grid[i].point_id[j]]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="参数说明-2"><a href="#参数说明-2" class="headerlink" title="参数说明"></a>参数说明</h4><ul>
 <li>pcl::PointCloud<a href="pcl::PointXYZI">pcl::PointXYZI</a>::Ptr cloud</li>
 <li>pcl::PointCloud<a href="pcl::PointXYZI">pcl::PointXYZI</a>::Ptr ground_cloud</li>
 <li>pcl::PointCloud<a href="pcl::PointXYZI">pcl::PointXYZI</a>::Ptr no_ground_cloud</li>
@@ -213,7 +297,6 @@
 <li>int num_voxel</li>
 </ul>
 <hr>
-<h1 id="其他点云数据处理"><a href="#其他点云数据处理" class="headerlink" title="其他点云数据处理"></a>其他点云数据处理</h1>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/10/08/%E7%82%B9%E4%BA%91%E5%9C%B0%E9%9D%A2%E6%8F%90%E5%8F%96-%E5%88%86%E5%89%B2/#more" rel="contents">
@@ -857,77 +940,6 @@
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="C-程序的路径管理"><a href="#C-程序的路径管理" class="headerlink" title="C++程序的路径管理"></a>C++程序的路径管理</h1>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/09/25/%E7%82%B9%E4%BA%91%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jun LEI">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-      <meta itemprop="description" content="Here is my Space">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hexo">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/09/25/%E7%82%B9%E4%BA%91%E6%BB%A4%E6%B3%A2%E7%AE%97%E6%B3%95/" class="post-title-link" itemprop="url">点云滤波算法</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2023-09-25 18:33:25 / Modified: 18:34:45" itemprop="dateCreated datePublished" datetime="2023-09-25T18:33:25+08:00">2023-09-25</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="CSF滤波"><a href="#CSF滤波" class="headerlink" title="CSF滤波"></a>CSF滤波</h1><p>CSF 滤波：<a target="_blank" rel="noopener" href="https://github.com/jianboqi/CSF">https://github.com/jianboqi/CSF</a><br>Cloth Simulation Filter<br><a target="_blank" rel="noopener" href="http://www.mdpi.com/2072-4292/8/6/501/htm">http://www.mdpi.com/2072-4292/8/6/501/htm</a><br>W. Zhang, J. Qi*, P. Wan, H. Wang, D. Xie, X. Wang, and G. Yan, “An Easy-to-Use Airborne LiDAR Data Filtering Method Based on Cloth Simulation,” Remote Sens., vol. 8, no. 6, p. 501, 2016</p>
-<h1 id=""><a href="#" class="headerlink" title=""></a></h1><p>Identifying ground returns using ProgressiveMorphologicalFilter segmentation</p>
-
       
     </div>
 
