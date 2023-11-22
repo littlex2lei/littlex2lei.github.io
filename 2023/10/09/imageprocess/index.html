@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="核心功能通过图像处理 获取带有道路标记的像素">
+<meta property="og:type" content="article">
+<meta property="og:title" content="imageprocess">
+<meta property="og:url" content="http://example.com/2023/10/09/imageprocess/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="核心功能通过图像处理 获取带有道路标记的像素">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-10-09T14:48:01.000Z">
+<meta property="article:modified_time" content="2023-10-09T14:50:47.397Z">
+<meta property="article:author" content="Jun LEI">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2023/10/09/imageprocess/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2023/10/09/imageprocess/","path":"2023/10/09/imageprocess/","title":"imageprocess"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>imageprocess | Hexo</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hexo</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E5%8A%9F%E8%83%BD"><span class="nav-number">1.</span> <span class="nav-text">核心功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%B4%E6%96%87%E4%BB%B6"><span class="nav-number">3.</span> <span class="nav-text">头文件</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Jun LEI</p>
+  <div class="site-description" itemprop="description">Here is my Space</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/09/imageprocess/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jun LEI">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="Here is my Space">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="imageprocess | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          imageprocess
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-10-09 22:48:01 / Modified: 22:50:47" itemprop="dateCreated datePublished" datetime="2023-10-09T22:48:01+08:00">2023-10-09</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="核心功能"><a href="#核心功能" class="headerlink" title="核心功能"></a>核心功能</h2><p>通过图像处理 获取带有道路标记的像素</p>
+<span id="more"></span>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><p>Step 2 Image processing -&gt; get roadmarking pixels</p>
+<h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">ifndef</span> INCLUDE_IMAGE_H</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> INCLUDE_IMAGE_H</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;utility.h&quot;</span></span></span><br><span class="line"><span class="comment">//pcl</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pcl/point_cloud.h&gt;</span>  </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pcl/point_types.h&gt;</span>  </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pcl/io/pcd_io.h&gt;</span> </span></span><br><span class="line"></span><br><span class="line"><span class="comment">//opencv</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;opencv2/opencv.hpp&gt;</span>   </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;opencv2/highgui/highgui.hpp&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> cv;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> roadmarking</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">class</span> <span class="title class_">Imageprocess</span></span><br><span class="line">	&#123;</span><br><span class="line">	  <span class="keyword">public</span>:</span><br><span class="line">		  <span class="function"><span class="type">void</span> <span class="title">pcgrid</span><span class="params">(Bounds &amp;boundingbox, <span class="type">float</span> resolution)</span></span>;                   	  </span><br><span class="line">		  <span class="function"><span class="type">void</span> <span class="title">savepcgrid</span><span class="params">(Bounds &amp;boundingbox, <span class="type">float</span> resolution, <span class="type">const</span> pcXYZIPtr &amp;c)</span></span>;   </span><br><span class="line">		  <span class="function"><span class="type">void</span> <span class="title">savepcgrid</span><span class="params">(Bounds &amp;boundingbox, <span class="type">float</span> resolution,  pcXYZIPtr &amp;c,  pcXYZIPtr &amp;gc, pcXYZIPtr &amp;ngc)</span></span>;   </span><br><span class="line">		  <span class="function"><span class="type">void</span> <span class="title">pc2imgI</span><span class="params">(<span class="type">const</span> pcXYZIPtr &amp;cloud, <span class="type">int</span> whatcloud,  Mat &amp;img, <span class="type">float</span> times_std)</span></span>;         <span class="comment">//whatcloud[ 0: Original Cloud , 1: Ground Cloud , 2: Non-ground Cloud]; //times_std: maxI = meanI+ times_std*stdI</span></span><br><span class="line">		  <span class="function"><span class="type">void</span> <span class="title">pc2imgZ</span><span class="params">(<span class="type">const</span> pcXYZIPtr &amp;cloud, <span class="type">int</span> whatcloud,  Mat &amp;img)</span></span>;                          <span class="comment">//whatcloud[ 0: Original Cloud , 1: Ground Cloud , 2: Non-ground Cloud]</span></span><br><span class="line">		  <span class="function"><span class="type">void</span> <span class="title">pc2imgD</span><span class="params">(<span class="type">const</span> pcXYZIPtr &amp;cloud, <span class="type">int</span> whatcloud,  Mat &amp;img ,<span class="type">float</span> k)</span></span>;                 <span class="comment">//whatcloud[ 0: Original Cloud , 1: Ground Cloud , 2: Non-ground Cloud] k:expected max point number in a pixel		 </span></span><br><span class="line">		  <span class="function"><span class="type">void</span> <span class="title">img2pc_g</span><span class="params">(<span class="type">const</span> Mat &amp;img, <span class="type">const</span> pcXYZIPtr &amp;incloud, pcXYZIPtr &amp; outcloud)</span></span>;  </span><br><span class="line">		  <span class="function"><span class="type">void</span> <span class="title">img2pc_c</span><span class="params">(<span class="type">const</span> Mat &amp;img, <span class="type">const</span> pcXYZIPtr &amp;incloud, pcXYZIPtr &amp; outcloud)</span></span>;  </span><br><span class="line"></span><br><span class="line">		  <span class="function"><span class="type">void</span> <span class="title">img2pclabel_g</span><span class="params">(<span class="type">const</span> Mat &amp;img, <span class="type">const</span> pcXYZIPtr &amp;incloud, vector&lt;pcXYZI&gt; &amp;outclouds, <span class="type">double</span> dZ)</span></span>;   </span><br><span class="line">		  <span class="function"><span class="type">void</span> <span class="title">img2pclabel_c</span><span class="params">(<span class="type">const</span> Mat &amp;img, <span class="type">const</span> pcXYZIPtr &amp;incloud, vector&lt;pcXYZI&gt; &amp;outclouds, <span class="type">double</span> dZ)</span></span>; </span><br><span class="line"></span><br><span class="line">		  <span class="function">Mat <span class="title">Sobelboundary</span><span class="params">(Mat img0)</span></span>;                                                  <span class="comment">//Sobel</span></span><br><span class="line">		  </span><br><span class="line">		  <span class="function"><span class="type">float</span> <span class="title">caculateCurrentEntropy</span><span class="params">(Mat hist, <span class="type">int</span> threshold)</span></span>;                      </span><br><span class="line">		  <span class="function">Mat <span class="title">maxEntropySegMentation</span><span class="params">(Mat inputImage)</span></span>;                                 </span><br><span class="line">		  <span class="function">Mat <span class="title">ExtractRoadPixelIZD</span><span class="params">(<span class="type">const</span> Mat &amp; _binI,<span class="type">const</span> Mat &amp; _binZ,<span class="type">const</span> Mat &amp; _binD)</span></span>; <span class="comment">//(for MLS)</span></span><br><span class="line">		  <span class="function">Mat <span class="title">ExtractRoadPixelIZ</span> <span class="params">(<span class="type">const</span> Mat &amp; _binI,<span class="type">const</span> Mat &amp; _binZ)</span></span>;                   <span class="comment">//(for ALS)</span></span><br><span class="line"></span><br><span class="line">		  <span class="function"><span class="type">void</span> <span class="title">RemoveSmallRegion</span><span class="params">(<span class="type">const</span> Mat &amp;_binImg, Mat &amp;_binfilter, <span class="type">int</span> AreaLimit)</span></span>;   </span><br><span class="line">		  <span class="function"><span class="type">void</span> <span class="title">CcaByTwoPass</span><span class="params">(<span class="type">const</span> Mat &amp; _binfilterImg, Mat &amp; _labelImg)</span></span>;                </span><br><span class="line">		  <span class="function"><span class="type">void</span> <span class="title">CcaBySeedFill</span><span class="params">(<span class="type">const</span> Mat&amp; _binfilterImg, Mat &amp; _lableImg)</span></span>;                </span><br><span class="line">		  </span><br><span class="line">		  <span class="function"><span class="type">void</span> <span class="title">ImgReverse</span><span class="params">(<span class="type">const</span> Mat &amp;img, Mat &amp;img_reverse)</span></span>;                            </span><br><span class="line">		  <span class="function"><span class="type">void</span> <span class="title">ImgFilling</span><span class="params">(<span class="type">const</span> Mat &amp;img, Mat &amp;img_fill)</span></span>;                              </span><br><span class="line"></span><br><span class="line">		  <span class="function"><span class="type">void</span> <span class="title">LabelColor</span><span class="params">(<span class="type">const</span> Mat &amp; _labelImg, Mat &amp; _colorImg)</span></span>;                     </span><br><span class="line">		  <span class="function">Scalar <span class="title">GetRandomColor</span><span class="params">()</span></span>;                                                      </span><br><span class="line"></span><br><span class="line">		  <span class="function"><span class="type">void</span> <span class="title">DetectCornerHarris</span><span class="params">(<span class="type">const</span> Mat &amp; src, <span class="type">const</span> Mat &amp; colorlabel, Mat &amp; cornershow, Mat &amp; cornerwithimg, <span class="type">int</span> threshold)</span></span>;                                <span class="comment">//Harris</span></span><br><span class="line">		  <span class="function"><span class="type">void</span> <span class="title">DetectCornerShiTomasi</span><span class="params">(<span class="type">const</span> Mat &amp; src, <span class="type">const</span> Mat &amp; colorlabel, Mat &amp; cornerwithimg, <span class="type">int</span> minDistance, <span class="type">double</span> mincorenerscore)</span></span>;                     <span class="comment">//Shi-Tomasi</span></span><br><span class="line"></span><br><span class="line">		  <span class="function"><span class="type">void</span> <span class="title">Truncate</span><span class="params">( Mat &amp; Img, Mat &amp; TImg)</span></span>;                                   </span><br><span class="line"></span><br><span class="line">		  <span class="comment">//Save images</span></span><br><span class="line">		  <span class="function"><span class="type">void</span> <span class="title">saveimg</span><span class="params">(<span class="type">const</span> Mat &amp;ProjI, <span class="type">const</span> Mat &amp;ProjZ, <span class="type">const</span> Mat &amp;ProjD, <span class="type">const</span> Mat &amp;ProjImf, <span class="type">const</span> Mat &amp;GI, <span class="type">const</span> Mat &amp;GZ, <span class="type">const</span> Mat &amp;BZ, <span class="type">const</span> Mat &amp;BD, <span class="type">const</span> Mat &amp;GIR, <span class="type">const</span> Mat &amp;BI, <span class="type">const</span> Mat &amp;BIF, <span class="type">const</span> Mat &amp;Label, <span class="type">const</span> Mat &amp;Corner)</span></span>;</span><br><span class="line">		  <span class="function"><span class="type">void</span> <span class="title">saveimg</span><span class="params">(std::string base_folder, <span class="type">int</span> file_index, <span class="type">const</span> Mat &amp;ProjI, <span class="type">const</span> Mat &amp;ProjZ, <span class="type">const</span> Mat &amp;ProjImf, <span class="type">const</span> Mat &amp;GI, <span class="type">const</span> Mat &amp;GZ, <span class="type">const</span> Mat &amp;BZ, <span class="type">const</span> Mat &amp;GIR, <span class="type">const</span> Mat &amp;BI, <span class="type">const</span> Mat &amp;BIF, <span class="type">const</span> Mat &amp;Label)</span></span>;</span><br><span class="line">		  <span class="function"><span class="type">void</span> <span class="title">saveimg</span><span class="params">(std::string base_folder, <span class="type">int</span> file_index, <span class="type">const</span> Mat &amp;ProjI, <span class="type">const</span> Mat &amp;ProjZ, <span class="type">const</span> Mat &amp;ProjD, <span class="type">const</span> Mat &amp;ProjImf, <span class="type">const</span> Mat &amp;GI, <span class="type">const</span> Mat &amp;GZ, <span class="type">const</span> Mat &amp;BZ, <span class="type">const</span> Mat &amp;BD, <span class="type">const</span> Mat &amp;GIR, <span class="type">const</span> Mat &amp;BI, <span class="type">const</span> Mat &amp;BIF, <span class="type">const</span> Mat &amp;Label)</span></span>; </span><br><span class="line">		  <span class="function"><span class="type">void</span> <span class="title">saveimg</span><span class="params">(<span class="type">const</span> Mat &amp;ProjI, <span class="type">const</span> Mat &amp;ProjImf, <span class="type">const</span> Mat &amp;GI, <span class="type">const</span> Mat &amp;BI, <span class="type">const</span> Mat &amp;BIF, <span class="type">const</span> Mat &amp;Label)</span></span>;</span><br><span class="line"></span><br><span class="line">		  <span class="type">int</span> nx, ny; <span class="comment">//pixel number</span></span><br><span class="line">		  <span class="type">int</span> timin, tjmin; <span class="comment">//truncated pixel no.</span></span><br><span class="line">		  <span class="type">float</span> minX, minY, minZ;  <span class="comment">//bounding box minimum value</span></span><br><span class="line">		  <span class="type">float</span> res;  <span class="comment">//resolution</span></span><br><span class="line">		  vector&lt;vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&gt; CMatrixIndice;    <span class="comment">//cloud</span></span><br><span class="line">		  vector&lt;vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&gt; GCMatrixIndice;   <span class="comment">//ground cloud</span></span><br><span class="line">		  vector&lt;vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&gt; NGCMatrixIndice;  <span class="comment">//non-ground cloud</span></span><br><span class="line">		  <span class="type">int</span> totallabel; </span><br><span class="line">		  vector&lt;vector &lt;<span class="type">int</span>&gt;&gt;  labelx;  </span><br><span class="line">		  vector&lt;vector &lt;<span class="type">int</span>&gt;&gt;  labely;  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">protected</span>:</span><br><span class="line">	</span><br><span class="line">	  <span class="keyword">private</span>:</span><br><span class="line">		 </span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/10/08/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%B7%A5%E5%85%B7bypy%E5%B8%AE%E5%8A%A9%E6%96%87%E4%BB%B6/" rel="prev" title="百度网盘工具bypy帮助文件">
+                  <i class="fa fa-angle-left"></i> 百度网盘工具bypy帮助文件
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/10/14/%E7%82%B9%E4%BA%91%E5%A4%84%E7%90%86%E9%83%A8%E5%88%86%E7%A8%8B%E5%BA%8F/" rel="next" title="点云处理部分程序">
+                  点云处理部分程序 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Jun LEI</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
