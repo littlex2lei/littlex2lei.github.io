@@ -27,7 +27,7 @@
 <meta property="og:description" content="AI in renovation - Scan-2-BIMWhen it comes to renovating existing buildings, often no 3D models are available. One solution is to use laser scanners to create a digital copy (a point cloud) of the bui">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-10-19T01:13:41.876Z">
-<meta property="article:modified_time" content="2023-10-19T01:16:06.980Z">
+<meta property="article:modified_time" content="2023-11-22T02:35:53.350Z">
 <meta property="article:author" content="Jun LEI">
 <meta name="twitter:card" content="summary">
 
@@ -116,7 +116,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">24</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -172,9 +172,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2023-10-19 09:13:41 / Modified: 09:16:06" itemprop="dateCreated datePublished" datetime="2023-10-19T09:13:41+08:00">2023-10-19</time>
+      <time title="Created: 2023-10-19 09:13:41" itemprop="dateCreated datePublished" datetime="2023-10-19T09:13:41+08:00">2023-10-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-22 10:35:53" itemprop="dateModified" datetime="2023-11-22T10:35:53+08:00">2023-11-22</time>
     </span>
 
   
@@ -187,6 +193,8 @@
     
     
     <div class="post-body" itemprop="articleBody"><p>AI in renovation - Scan-2-BIM<br>When it comes to renovating existing buildings, often no 3D models are available. One solution is to use laser scanners to create a digital copy (a point cloud) of the building. The main challenge here is to convert these unstructured points into usable geometry. The team at Bricsys is working on semi-automatic tools to obtain these 3D solids.</p>
+<span id="more"></span>
+<p><escape><!-- more --></escape></p>
 <p>First, BricsCAD detects planar surfaces in a point cloud. This is simple because the majority of wall and floor surfaces are flat. AI can easily fit a surface to a set of points that are approximately coplanar with a manually selected point. By fitting several surfaces in this semi-automatic way and stitching them together, it’s easy to create a volume representing a specific room in a building. Repeat this process for all the rooms and you can quickly have a solid model representing the interior volume of a building.</p>
 <p>In practice, real world surfaces are never perfectly vertical or horizontal. However, nobody wants small deviations due to measurement or calculation errors to occur in their final model. AI can be used here to optimize geometry. It is then up to the user whether or not, to perform this step because in some cases, optimization is not desirable, e.g. if you want to check the roof pitch and puddle formation of a flat roof.</p>
 <p>In a final step, BricsCAD uses a smart algorithm to create the exterior walls, floor slabs, roofs and interior walls based on the room volume planes.</p>
@@ -214,8 +222,8 @@
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/10/29/%E7%82%B9%E4%BA%91%E5%9C%B0%E9%9D%A2%E5%88%86%E5%89%B2Benchmark/" rel="next" title="点云地面分割Benchmark">
-                  点云地面分割Benchmark <i class="fa fa-angle-right"></i>
+                <a href="/2023/10/29/%E6%9C%BA%E8%8D%B7BIM%E5%92%A8%E8%AF%A2/" rel="next" title="智慧交通">
+                  智慧交通 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -236,7 +244,7 @@
 
   <div class="copyright">
     &copy; 
-    <span itemprop="copyrightYear">2023</span>
+    <span itemprop="copyrightYear">2024</span>
     <span class="with-love">
       <i class="fa fa-heart"></i>
     </span>

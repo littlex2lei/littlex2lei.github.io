@@ -19,15 +19,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="这是pointcloudprocess.cpp程序中的pointfilter函数用于对输入的一组点云数据进行处理，其中包括阈值分割（使用Otsu方法）和统计异常值移除（SOR）。 功能描述源码解释1. 函数参数：const vector &amp;inclouds：输入点云数据，其中pcXYZI似乎是一个自定义的结构，包含了XYZ坐标和强度信息。vector &amp;outSORclouds：用">
+    <meta name="description" content="这是pointcloudprocess.cpp程序中的pointfilter函数用于对输入的一组点云数据进行处理，其中包括阈值分割（使用Otsu方法）和统计异常值移除（SOR）。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="点云处理部分程序">
 <meta property="og:url" content="http://example.com/2023/10/14/%E7%82%B9%E4%BA%91%E5%A4%84%E7%90%86%E9%83%A8%E5%88%86%E7%A8%8B%E5%BA%8F/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="这是pointcloudprocess.cpp程序中的pointfilter函数用于对输入的一组点云数据进行处理，其中包括阈值分割（使用Otsu方法）和统计异常值移除（SOR）。 功能描述源码解释1. 函数参数：const vector &amp;inclouds：输入点云数据，其中pcXYZI似乎是一个自定义的结构，包含了XYZ坐标和强度信息。vector &amp;outSORclouds：用">
+<meta property="og:description" content="这是pointcloudprocess.cpp程序中的pointfilter函数用于对输入的一组点云数据进行处理，其中包括阈值分割（使用Otsu方法）和统计异常值移除（SOR）。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-10-14T04:28:03.000Z">
-<meta property="article:modified_time" content="2023-10-14T04:38:02.492Z">
+<meta property="article:modified_time" content="2023-11-22T02:33:57.060Z">
 <meta property="article:author" content="Jun LEI">
 <meta name="twitter:card" content="summary">
 
@@ -117,7 +117,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">24</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -173,9 +173,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2023-10-14 12:28:03 / Modified: 12:38:02" itemprop="dateCreated datePublished" datetime="2023-10-14T12:28:03+08:00">2023-10-14</time>
+      <time title="Created: 2023-10-14 12:28:03" itemprop="dateCreated datePublished" datetime="2023-10-14T12:28:03+08:00">2023-10-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-22 10:33:57" itemprop="dateModified" datetime="2023-11-22T10:33:57+08:00">2023-11-22</time>
     </span>
 
   
@@ -188,6 +194,8 @@
     
     
     <div class="post-body" itemprop="articleBody"><p>这是pointcloudprocess.cpp程序中的pointfilter函数<br>用于对输入的一组点云数据进行处理，其中包括阈值分割（使用Otsu方法）和统计异常值移除（SOR）。</p>
+<span id="more"></span>
+<p><escape><!-- more --></escape></p>
 <h2 id="功能描述"><a href="#功能描述" class="headerlink" title="功能描述"></a>功能描述</h2><h2 id="源码解释"><a href="#源码解释" class="headerlink" title="源码解释"></a>源码解释</h2><h3 id="1-函数参数："><a href="#1-函数参数：" class="headerlink" title="1. 函数参数："></a>1. 函数参数：</h3><p>const vector<pcXYZI> &amp;inclouds：输入点云数据，其中pcXYZI似乎是一个自定义的结构，包含了XYZ坐标和强度信息。<br>vector<pcXYZI> &amp;outSORclouds：用于存储SOR过滤后的点云数据的输出向量。<br>int N：用于Otsu方法的参数，表示直方图的分段数。<br>int MeanK：SOR滤波的参数，表示考虑邻域内点的数量。<br>double std：SOR滤波的参数，表示标准差。</p>
 <h3 id="2-初始化输出向量："><a href="#2-初始化输出向量：" class="headerlink" title="2. 初始化输出向量："></a>2. 初始化输出向量：</h3><p>创建了一个名为outclouds的局部向量，用于存储Otsu方法阈值分割后的点云数据。<br>调整了outclouds和outSORclouds的大小以匹配输入点云数据的数量。</p>
 <h3 id="3-使用Otsu方法进行阈值分割："><a href="#3-使用Otsu方法进行阈值分割：" class="headerlink" title="3. 使用Otsu方法进行阈值分割："></a>3. 使用Otsu方法进行阈值分割：</h3><p>对输入点云中的每个点云数据进行循环（使用OpenMP进行多线程并行处理）。<br>为每个点云数据提取强度值，并计算最大强度值（intensitymax）。<br>创建直方图并计算直方图中的每个分段的频率。<br>使用Otsu方法来找到一个阈值，以便将点分为两个组。<br>根据阈值将点分为两组：大于阈值的点存储在outclouds[i]中。</p>
@@ -332,7 +340,7 @@
 
   <div class="copyright">
     &copy; 
-    <span itemprop="copyrightYear">2023</span>
+    <span itemprop="copyrightYear">2024</span>
     <span class="with-love">
       <i class="fa fa-heart"></i>
     </span>
